@@ -1,0 +1,152 @@
+﻿import Link from "next/link";
+import { ArrowRight, MapPin, Clock, Briefcase, CheckCircle } from "lucide-react";
+
+const openings = [
+  {
+    title: "Full Stack Developer",
+    type: "Full-time",
+    location: "Remote / UK",
+    dept: "Engineering",
+    desc: "We're looking for an experienced Full Stack Developer to build and maintain web applications using React, Node.js, and PostgreSQL.",
+    requirements: ["3+ years of experience with React and Node.js", "Experience with TypeScript", "Familiarity with cloud platforms (AWS/GCP)", "Strong problem-solving skills"],
+  },
+  {
+    title: "UI/UX Designer",
+    type: "Full-time",
+    location: "Remote / UK",
+    dept: "Design",
+    desc: "Join our design team to create beautiful, intuitive interfaces for our clients' websites and web applications.",
+    requirements: ["Proficiency in Figma or Adobe XD", "Portfolio demonstrating strong UI/UX skills", "Understanding of responsive design principles", "Excellent communication skills"],
+  },
+  {
+    title: "SEO Specialist",
+    type: "Full-time",
+    location: "Remote",
+    dept: "Marketing",
+    desc: "Help our clients rank higher in search engines through data-driven SEO strategies, content planning, and link building campaigns.",
+    requirements: ["2+ years of SEO experience", "Proficiency with SEMrush, Ahrefs, or similar tools", "Strong analytical and writing skills", "Track record of improving organic rankings"],
+  },
+  {
+    title: "AI/ML Engineer",
+    type: "Full-time",
+    location: "Remote",
+    dept: "AI",
+    desc: "Develop cutting-edge AI solutions including NLP models, image recognition systems, and intelligent automation tools for our clients.",
+    requirements: ["Experience with Python and ML frameworks (TensorFlow/PyTorch)", "Knowledge of NLP and computer vision", "Experience deploying ML models to production", "Strong mathematics background"],
+  },
+];
+
+const perks = [
+  "Flexible remote-first work environment",
+  "Competitive salary and performance bonuses",
+  "Professional development budget",
+  "Latest tools and technology",
+  "Collaborative and innovative culture",
+  "Opportunity to work on diverse, exciting projects",
+];
+
+export default function CareersPage() {
+  return (
+    <>
+      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Join <span style={{ color: "#FFCC33" }}>Forge9x</span>
+            </h1>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              We're a growing team of passionate technologists, designers, and strategists. If you love building things that make a real difference, we'd love to hear from you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Perks */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Work at Forge9x?</h2>
+              <p className="text-gray-500 leading-relaxed mb-8">
+                At Forge9x, we believe our team is our greatest asset. We invest in our people, foster creativity, and build a culture where great ideas thrive.
+              </p>
+              <ul className="flex flex-col gap-3">
+                {perks.map((perk) => (
+                  <li key={perk} className="flex items-center gap-3 text-gray-700">
+                    <CheckCircle size={18} className="text-blue-600 shrink-0" />
+                    {perk}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-3xl p-10 text-white" style={{ background: "linear-gradient(135deg, #00679A 0%, #004e75 100%)" }}>
+              <div className="text-3xl font-black mb-2">
+                <span style={{ color: "#FFCC33" }}>Forge</span><span>9x</span>
+              </div>
+              <p className="text-blue-100 mb-8">Cutting-edge IT solutions, powered by great people.</p>
+              <div className="grid grid-cols-2 gap-4 text-center">
+                {[["Remote First", "Work from anywhere"], ["Fast Growth", "Expanding team"], ["Great Tech", "Latest tools"], ["Real Impact", "Client results"]].map(([t, s]) => (
+                  <div key={t} className="bg-white/10 rounded-xl p-4">
+                    <div className="font-semibold">{t}</div>
+                    <div className="text-sm text-blue-200">{s}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Open Positions */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Open Positions</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Join our growing team and help us deliver exceptional digital solutions.</p>
+          </div>
+          <div className="flex flex-col gap-5">
+            {openings.map((job) => (
+              <div key={job.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-3 mb-3">
+                      <h3 className="text-lg font-semibold text-gray-900">{job.title}</h3>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-600">{job.dept}</span>
+                    </div>
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+                      <span className="flex items-center gap-1"><Briefcase size={14} /> {job.type}</span>
+                      <span className="flex items-center gap-1"><MapPin size={14} /> {job.location}</span>
+                    </div>
+                    <p className="text-sm text-gray-500 leading-relaxed mb-4">{job.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {job.requirements.map((r) => (
+                        <span key={r} className="px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600">{r}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <Link
+                    href="/contact"
+                    className="shrink-0 inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-white text-sm hover:brightness-110 transition-all"
+                    style={{ backgroundColor: "#00679A" }}
+                  >
+                    Apply Now <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16" style={{ backgroundColor: "#FFCC33" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Don't See Your Role?</h2>
+          <p className="text-gray-800 mb-8 max-w-xl mx-auto">We're always open to hearing from talented people. Send us your CV and let us know how you can contribute.</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+            Get in Touch <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
