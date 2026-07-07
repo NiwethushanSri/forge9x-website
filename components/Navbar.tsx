@@ -5,12 +5,12 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const services = [
-  { label: "Web Development",  href: "/services/web-development" },
-  { label: "Web Applications", href: "/services/web-applications" },
-  { label: "AI Development",   href: "/services/ai-development" },
+  { label: "Web Development",    href: "/services/web-development" },
+  { label: "Web Applications",   href: "/services/web-applications" },
+  { label: "AI Development",     href: "/services/ai-development" },
   { label: "Mobile Development", href: "/services/mobile-development" },
-  { label: "SEO",              href: "/services/seo" },
-  { label: "Graphic Design",   href: "/services/graphic-design" },
+  { label: "SEO",                href: "/services/seo" },
+  { label: "Graphic Design",     href: "/services/graphic-design" },
 ];
 
 const navLinks = [
@@ -24,8 +24,8 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen]       = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [menuOpen, setMenuOpen]             = useState(false);
+  const [servicesOpen, setServicesOpen]     = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ export default function Navbar() {
             <span style={{ color: "#FFCC33" }}>9x</span>
           </Link>
 
-          {/* Desktop Nav — hidden below lg */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-9">
             <Link href="/" className="text-lg font-semibold text-gray-700 hover:text-[#00679A] transition-colors whitespace-nowrap">
               Home
@@ -77,7 +77,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA — desktop */}
+          {/* CTA */}
           <div className="hidden lg:flex shrink-0">
             <Link
               href="/contact"
@@ -88,7 +88,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Hamburger — tablet & mobile */}
+          {/* Hamburger */}
           <button
             className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors ml-2"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -99,7 +99,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile / Tablet drawer */}
+      {/* Mobile drawer */}
       {menuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg max-h-[80vh] overflow-y-auto">
           <nav className="flex flex-col px-4 py-3 gap-1">
@@ -107,7 +107,6 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* Services accordion */}
             <button
               className="flex items-center justify-between py-3 px-2 text-base font-semibold text-gray-800 border-b border-gray-50 hover:text-[#00679A] w-full text-left"
               onClick={() => setMobileServices(!mobileServices)}
