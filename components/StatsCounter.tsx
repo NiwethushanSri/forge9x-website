@@ -59,11 +59,11 @@ export default function StatsCounter({ stats }: { stats: Stat[] }) {
           <div className="mb-1" style={{ color: "#00679A" }}>{s.icon}</div>
           <div
             className="font-extrabold leading-none tracking-tight"
-            style={{ fontSize: "clamp(2rem, 5vw, 4rem)", color: "#0F172A" }}
+            style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", color: "#0F172A" }}
           >
             <Counter value={s.value} suffix={s.suffix} duration={1800} />
           </div>
-          <div className="font-semibold text-gray-400 uppercase tracking-widest" style={{ fontSize: "0.7rem" }}>
+          <div className="font-semibold text-gray-400 uppercase tracking-widest" style={{ fontSize: "0.85rem" }}>
             {s.label}
           </div>
         </div>
