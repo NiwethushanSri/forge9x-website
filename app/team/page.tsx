@@ -40,7 +40,7 @@ export default function TeamPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Company / Our Team</div>
@@ -56,11 +56,11 @@ export default function TeamPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
       {/* Team Members */}
-      <section className="bg-black py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24">
           {teamMembers.map((member, idx) => (
             <div key={member.name}>
@@ -69,7 +69,7 @@ export default function TeamPage() {
                 {/* Photo card */}
                 <div className="lg:col-span-1 flex flex-col items-center lg:items-start gap-5">
                   <div className="relative w-full max-w-xs mx-auto lg:mx-0">
-                    <div className="aspect-[3/4] rounded-3xl overflow-hidden border-4 border-gray-800 shadow-2xl bg-gray-900">
+                    <div className="aspect-[3/4] rounded-3xl overflow-hidden border-4 border-gray-900 shadow-2xl bg-[#0a0a0a]">
                       <TeamPhoto src={member.photo} alt={member.name} initials={member.initials} color={member.color} />
                     </div>
                     {/* Decorative accent */}
@@ -121,7 +121,7 @@ export default function TeamPage() {
                 </div>
               </div>
 
-              {idx < teamMembers.length - 1 && <hr className="mt-24 border-gray-800" />}
+              {idx < teamMembers.length - 1 && <hr className="mt-24 border-gray-900" />}
             </div>
           ))}
         </div>
@@ -129,11 +129,11 @@ export default function TeamPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
       {/* Join CTA */}
-      <section className="bg-black py-16">
+      <section className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Want to Join Our Team?</h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">We are always looking for talented people who share our passion for technology and innovation.</p>

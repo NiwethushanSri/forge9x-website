@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -17,7 +17,7 @@ const projects = [
   { title: "SEO Campaign   Law Firm", category: "Web Development", desc: "A comprehensive SEO overhaul that improved organic traffic by 340% in 6 months through content strategy and link building.", tags: ["SEO", "Content", "Analytics"], image: "/portfolio/seo.jpg" },
   { title: "Healthcare Appointment System", category: "Web Applications", desc: "Cloud-based appointment booking system for a multi-clinic healthcare group with calendar sync and SMS reminders.", tags: ["React", "AWS", "Twilio"], image: "/portfolio/healthcare.jpg" },
   { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"], image: "/portfolio/biometrics.jpg" },
-  { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], logo: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
+  { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], image: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
   { title: "Mangala Matrimony", category: "Mobile", desc: "A matrimonial matchmaking platform connecting Sri Lankan singles worldwide, with profile creation, matching, and secure account access.", tags: ["Matchmaking", "Mobile", "SaaS"], image: "/portfolio/mangala.jpg", url: "https://mangala.love" },
 ];
 
@@ -30,14 +30,14 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Case Studies
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Boost your digital potential. Real projects, real results — see how Forge9x helps businesses turn bold ideas into powerful digital products.
+              Boost your digital potential. Real projects, real results see how Forge9x helps businesses turn bold ideas into powerful digital products.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
       </div>
 
-      <section className="bg-black py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12">
             {/* Sidebar filters */}
@@ -74,20 +74,14 @@ export default function PortfolioPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {filteredProjects.map((p) => (
                 <div key={p.title} className="group">
-                  <div className="aspect-[4/3] relative overflow-hidden rounded-2xl mb-5">
-                    {p.logo ? (
-                      <div className="w-full h-full flex items-center justify-center" style={{ background: "linear-gradient(135deg, #111827 0%, #1e293b 100%)" }}>
-                        <Image src={p.logo} alt={p.title} width={220} height={64} className="object-contain" />
-                      </div>
-                    ) : (
-                      <Image
-                        src={p.image!}
-                        alt={p.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    )}
+                  <div className="relative overflow-hidden rounded-2xl mb-5 bg-gray-900 aspect-video">
+                    <Image
+                      src={p.image!}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                   <div className="text-xs font-medium mb-2" style={{ color: "#5EA8D9" }}>{p.category}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{p.title}</h3>

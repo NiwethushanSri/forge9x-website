@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import {
   Globe, Code2, Brain, Smartphone, Search, Palette,
@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import TechMarquee from "@/components/TechMarquee";
 import StatsCounter from "@/components/StatsCounter";
-import TestimonialsMarquee from "@/components/TestimonialsMarquee";
+import TestimonialsShowcase from "@/components/TestimonialsShowcase";
 
 const services = [
   {
@@ -76,10 +76,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-black text-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-300 text-xs sm:text-sm font-medium mb-5 sm:mb-6">
-              <Zap size={12} />
-              UK-Based Digital Innovation Agency
-            </div>
+
             <h1 className="font-bold leading-tight mb-5 sm:mb-6 text-4xl sm:text-6xl lg:text-7xl">
               Build. Grow. Dominate Your Digital Presence.
             </h1>
@@ -108,13 +105,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
-      </div>
-
       {/* Stats */}
-      <section className="bg-black border-b border-gray-800">
+      <section className="bg-black border-t border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StatsCounter stats={[
             { value: 200, suffix: "+", label: "Clients Served",      icon: <Users size={32} /> },
@@ -126,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* Tech Marquee */}
-      <section className="bg-black py-14 overflow-hidden">
+      <section className="bg-black border-t border-gray-800 py-14 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
           <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Technologies We Work With</p>
         </div>
@@ -140,11 +132,11 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <section className="bg-black py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What We <span style={{ color: "#00679A" }}>Offer</span>
+              What We <span style={{ color: "#FFFFFF" }}>Offer</span>
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto">
               From websites to AI   we have the expertise to digitise and accelerate your business at every stage.
@@ -173,63 +165,49 @@ export default function Home() {
       </section>
 
       {/* Why Choose Forge9x */}
-      <section className="w-full overflow-hidden flex flex-col lg:flex-row">
-          {/* Left — gold background with content */}
-          <div className="flex flex-col justify-center px-6 sm:px-10 xl:px-16 py-12 lg:py-16 lg:w-1/2" style={{ backgroundColor: "#FFCC33" }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-5" style={{ color: "#111827" }}>
-              Why Choose <span style={{ color: "#00679A" }}>Forge</span><span style={{ color: "#FFFFFF" }}>9x</span>?
-            </h2>
-            <p className="leading-relaxed mb-8" style={{ color: "#1f2937" }}>
-              We don't just provide software solutions — we build lasting partnerships that fuel your success. At Forge9x, we believe impactful software has the power to keep customers engaged longer than they intended.
-            </p>
-            <ul className="flex flex-col gap-3 mb-8">
-              {whyUs.map((item) => (
-                <li key={item} className="flex items-center gap-3 font-medium" style={{ color: "#111827" }}>
-                  <CheckCircle size={18} className="shrink-0" style={{ color: "#00679A" }} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white transition-all hover:brightness-110 w-fit"
-              style={{ backgroundColor: "#00679A" }}
-            >
-              About Us <ArrowRight size={16} />
-            </Link>
-          </div>
+      <section className="bg-black border-t border-gray-800 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Left content */}
+            <div className="flex-1 flex flex-col justify-center">
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Why Forge9x</p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+                Why Choose Forge9x?
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-10">
+                We don't just provide software solutions we build lasting partnerships that fuel your success. At Forge9x, we believe impactful software has the power to keep customers engaged longer than they intended.
+              </p>
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white border border-white hover:bg-white hover:text-black transition-all w-fit"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-black transition-all hover:opacity-90 w-fit"
+                  style={{ backgroundColor: "#FFCC33" }}
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
 
-          {/* Right — full-bleed office photo */}
-          <div className="lg:w-1/2 min-h-[400px] lg:min-h-0" style={{ flexShrink: 0 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/office-team.jpg"
-              alt="Forge9x team at work"
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-            />
+            {/* Right image same height as content */}
+            <div className="lg:w-[48%] shrink-0 w-full">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/office-team.jpg"
+                alt="Forge9x team at work"
+                className="w-full aspect-[4/3] lg:aspect-auto lg:h-full rounded-2xl object-cover shadow-2xl"
+              />
+            </div>
           </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-black py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">Client Reviews</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            What Our <span style={{ color: "#00679A" }}>Clients Say</span>
-          </h2>
-          <a
-            href="https://g.page/r/CeoXP2uTs5uHEAE/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all hover:brightness-110 bg-white border border-gray-200 shadow-sm text-gray-800"
-          >
-            <Image src="/icons/google.svg" alt="Google" width={18} height={18} />
-            Leave Us a Google Review
-            <Star size={16} style={{ color: "#FBBC05" }} fill="currentColor" />
-          </a>
         </div>
-        <TestimonialsMarquee />
       </section>
+
+      <TestimonialsShowcase />
 
       {/* CTA Banner */}
       <section className="py-16" style={{ backgroundColor: "#FFCC33" }}>

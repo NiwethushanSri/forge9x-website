@@ -4,75 +4,48 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-10 mb-14">
-          {/* Brand */}
-          <div className="flex flex-col">
-            <div className="text-2xl font-bold mb-4">
-              <span style={{ color: "#60A5FA" }}>Forge</span>
+    <footer className="bg-black text-gray-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+
+          {/* Brand — wider column */}
+          <div className="lg:col-span-2 flex flex-col">
+            <div className="text-3xl font-black mb-6">
+              <span style={{ color: "#FFFFFF" }}>Forge</span>
               <span style={{ color: "#FFCC33" }}>9x</span>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed mb-4">
-              Your go-to partner for cutting-edge IT solutions. We build, grow, and maintain powerful web presences for businesses of all sizes.
-            </p>
+            <div className="flex flex-col gap-3 text-base mb-6">
+              <a href="tel:+447466008727" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Phone size={15} /> +44 7466 008727
+              </a>
+              <a href="tel:+94777233179" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Phone size={15} /> +94 777 233 179
+              </a>
+              <a href="mailto:hello@forge9x.co.uk" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail size={15} /> hello@forge9x.co.uk
+              </a>
+              <a href="mailto:info@forge9x.co.uk" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail size={15} /> info@forge9x.co.uk
+              </a>
+              <div className="flex items-start gap-2">
+                <MapPin size={15} className="mt-0.5 shrink-0" /> 140 Avon Road, Chelmsford, England, CM1 2LB
+              </div>
+            </div>
             <a
               href="https://g.page/r/CeoXP2uTs5uHEAE/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-base hover:text-white transition-colors"
             >
-              <Image src="/icons/google.svg" alt="Google" width={14} height={14} />
+              <Image src="/icons/google.svg" alt="Google" width={16} height={16} />
               Leave Us a Google Review
             </a>
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="tel:+447466008727" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                <Phone size={14} /> +44 7466 008727
-              </a>
-              <a href="tel:+94777233179" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                <Phone size={14} /> +94 777 233 179
-              </a>
-              <a href="mailto:hello@forge9x.co.uk" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                <Mail size={14} /> hello@forge9x.co.uk
-              </a>
-              <a href="mailto:info@forge9x.co.uk" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                <Mail size={14} /> info@forge9x.co.uk
-              </a>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=140+Avon+Road,+Chelmsford,+England,+CM1+2LB"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-2 text-gray-400 hover:text-white transition-colors"
-              >
-                <MapPin size={14} className="mt-0.5 shrink-0" /> 140 Avon Road, Chelmsford, England, CM1 2LB
-              </a>
-            </div>
           </div>
 
-          {/* Map */}
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=140+Avon+Road,+Chelmsford,+England,+CM1+2LB"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full h-64 lg:h-full min-h-[220px] rounded-2xl overflow-hidden border border-gray-700 relative block"
-            title="View on Google Maps"
-          >
-            <iframe
-              title="Forge9x UK Office Location"
-              src="https://www.google.com/maps?q=140+Avon+Road,+Chelmsford,+England,+CM1+2LB&output=embed"
-              className="w-full h-full pointer-events-none"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </a>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="flex flex-col gap-2 text-sm">
+            <h3 className="text-gray-500 font-normal mb-5 text-base">Services</h3>
+            <ul className="flex flex-col gap-4">
               {[
                 ["Web Development", "/services/web-development"],
                 ["Web Applications", "/services/web-applications"],
@@ -82,7 +55,7 @@ export default function Footer() {
                 ["Graphic Design", "/services/graphic-design"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link href={href} className="text-white text-base sm:text-lg font-normal hover:text-gray-300 transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -92,18 +65,19 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="flex flex-col gap-2 text-sm">
+            <h3 className="text-gray-500 font-normal mb-5 text-base">Company</h3>
+            <ul className="flex flex-col gap-4">
               {[
                 ["About Us", "/about"],
                 ["Portfolio", "/portfolio"],
                 ["Pricing", "/pricing"],
                 ["Blog", "/blog"],
                 ["Careers", "/careers"],
+                ["Team", "/team"],
                 ["Contact", "/contact"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link href={href} className="text-white text-base sm:text-lg font-normal hover:text-gray-300 transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -111,19 +85,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Stay Updated */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
-            <p className="text-sm text-gray-400 mb-4">Get the latest insights on web development, AI, and digital growth.</p>
-            <form className="flex flex-col gap-2">
+            <h3 className="text-gray-500 font-normal mb-5 text-base">Stay Updated</h3>
+            <p className="text-base text-gray-400 mb-5 leading-relaxed">Get the latest insights on web development, AI, and digital growth.</p>
+            <form className="flex flex-col gap-3">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
+                className="px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-base text-white placeholder-gray-500 focus:outline-none focus:border-blue-500"
               />
               <button
                 type="submit"
-                className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors"
+                className="px-4 py-3 rounded-lg text-base font-semibold text-white transition-colors"
                 style={{ backgroundColor: "#00679A" }}
               >
                 Subscribe
@@ -132,7 +106,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-base text-gray-500">
           <p>© {new Date().getFullYear()} Forge9x. All rights reserved.</p>
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

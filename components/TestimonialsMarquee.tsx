@@ -120,7 +120,7 @@ export default function TestimonialsMarquee() {
         {doubled.map((t, i) => (
           <div
             key={i}
-            className="bg-gray-900 rounded-2xl border border-gray-800 p-6 flex flex-col gap-3"
+            className="bg-black rounded-2xl border border-gray-800 p-6 flex flex-col gap-3"
             style={{ width: "min(320px, 85vw)", flexShrink: 0 }}
           >
             <Stars />

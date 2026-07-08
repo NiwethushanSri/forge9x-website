@@ -32,12 +32,12 @@ export default function TechMarquee() {
     <div className="overflow-hidden">
       <div
         className="flex gap-8 w-max"
-        style={{ animation: "marquee 40s linear infinite" }}
+        style={{ animation: "marquee 20s linear infinite" }}
       >
         {repeated.map((tech, i) => (
           <div
             key={i}
-            className="flex flex-col items-center gap-3 bg-gray-900 rounded-2xl border border-gray-800 px-5 py-5 sm:px-8 sm:py-7 min-w-[110px] sm:min-w-[140px] hover:border-gray-700 transition-all group"
+            className="flex flex-col items-center gap-3 px-5 py-5 sm:px-8 sm:py-7 min-w-[110px] sm:min-w-[140px] group"
           >
             <div className="w-16 h-16 flex items-center justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}

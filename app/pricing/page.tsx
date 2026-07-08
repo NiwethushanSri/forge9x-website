@@ -65,7 +65,7 @@ const maintenance = [
 export default function PricingPage() {
   return (
     <>
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Transparent Pricing
@@ -78,11 +78,11 @@ export default function PricingPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
       {/* Main Plans */}
-      <section className="bg-black py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-white mb-4">Website Development Packages</h2>
@@ -91,7 +91,7 @@ export default function PricingPage() {
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`rounded-2xl p-8 border flex flex-col ${plan.highlight ? "shadow-xl border-blue-500 relative" : "bg-gray-900 border-gray-800"}`}
+                className={`rounded-2xl p-8 border flex flex-col ${plan.highlight ? "shadow-xl border-blue-500 relative" : "bg-[#0a0a0a] border-gray-900"}`}
                 style={plan.highlight ? { backgroundColor: "#00679A" } : {}}
               >
                 {plan.highlight && (
@@ -126,11 +126,11 @@ export default function PricingPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
       {/* Maintenance Plans */}
-      <section className="bg-black py-16">
+      <section className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Website Maintenance Plans</h2>
@@ -138,7 +138,7 @@ export default function PricingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {maintenance.map((m) => (
-              <div key={m.name} className="bg-gray-900 rounded-2xl p-7 border border-gray-800">
+              <div key={m.name} className="bg-[#0a0a0a] rounded-2xl p-7 border border-gray-900">
                 <div className="text-blue-400 font-semibold mb-1">{m.name}</div>
                 <div className="text-2xl font-bold text-white mb-4">{m.price}</div>
                 <ul className="flex flex-col gap-3">
@@ -159,7 +159,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>Need a Custom Quote?</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>Every project is unique. Contact us for a tailored quote that fits your specific requirements and budget.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">
             Get a Custom Quote <ArrowRight size={16} />
           </Link>
         </div>

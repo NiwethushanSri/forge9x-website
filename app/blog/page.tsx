@@ -77,7 +77,7 @@ const categoryColors: Record<string, string> = {
 export default function BlogPage() {
   return (
     <>
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -92,14 +92,14 @@ export default function BlogPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
-      <section className="bg-black py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
-              <article key={post.slug} className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all flex flex-col">
+              <article key={post.slug} className="bg-[#0a0a0a] rounded-2xl overflow-hidden border border-gray-900 hover:border-gray-700 transition-all flex flex-col">
                 <div className="h-44 relative overflow-hidden">
                   <Image
                     src={post.image}
@@ -115,7 +115,7 @@ export default function BlogPage() {
                   </span>
                   <h2 className="text-lg font-semibold text-white mb-3 leading-snug">{post.title}</h2>
                   <p className="text-sm text-gray-400 leading-relaxed mb-4 flex-1">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-800">
+                  <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-900">
                     <div className="flex items-center gap-1">
                       <User size={12} />
                       {post.author}

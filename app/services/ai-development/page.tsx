@@ -1,49 +1,21 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Brain, Bot, BarChart3, Cpu, Eye, MessageSquare, ScanFace } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 
 const aiServices = [
-  {
-    icon: <Brain size={24} />,
-    title: "Custom AI Applications",
-    desc: "Tailor-made AI applications designed to meet your specific business needs   AI-powered chatbots, predictive analytics, or machine learning models with cutting-edge expertise.",
-  },
-  {
-    icon: <Bot size={24} />,
-    title: "AI Bots and Automation",
-    desc: "Automate repetitive tasks and enhance customer service. Our intelligent bots understand and respond to customer inquiries, optimising your workflow seamlessly.",
-  },
-  {
-    icon: <BarChart3 size={24} />,
-    title: "AI Analytics and Insights",
-    desc: "Unlock valuable insights from your data. Our AI-driven analytics help you make data-driven decisions, identify trends, and optimise business processes for better performance.",
-  },
-  {
-    icon: <Cpu size={24} />,
-    title: "Machine Learning Integration",
-    desc: "Integrate machine learning into your existing systems. From recommendation engines to fraud detection, our ML solutions bring added value to your business operations.",
-  },
-  {
-    icon: <Eye size={24} />,
-    title: "Image Recognition",
-    desc: "Accurate classification and identification of elements within your images. Working closely with your data to ensure effective recognition tailored to your use case.",
-  },
-  {
-    icon: <MessageSquare size={24} />,
-    title: "NLP & Text Analysis",
-    desc: "Advanced NLP solutions   sentiment analysis, topic modelling, entity recognition, and text classification   to uncover trends and drive better decision-making.",
-  },
-  {
-    icon: <ScanFace size={24} />,
-    title: "Secure Facial Biometrics",
-    desc: "Speed, accuracy, and ease of use. Leveraging advanced ML algorithms for accurate identification of individuals, even under challenging lighting or environmental conditions.",
-  },
+  { icon: <Brain size={24} />, color: "#E76F51", title: "Custom AI Applications", desc: "Tailor-made AI applications designed to meet your specific business needs AI-powered chatbots, predictive analytics, or machine learning models with cutting-edge expertise." },
+  { icon: <Bot size={24} />, color: "#8AB17D", title: "AI Bots and Automation", desc: "Automate repetitive tasks and enhance customer service. Our intelligent bots understand and respond to customer inquiries, optimising your workflow seamlessly." },
+  { icon: <BarChart3 size={24} />, color: "#E9C46A", title: "AI Analytics and Insights", desc: "Unlock valuable insights from your data. Our AI-driven analytics help you make data-driven decisions, identify trends, and optimise business processes for better performance." },
+  { icon: <Cpu size={24} />, color: "#6FA8DC", title: "Machine Learning Integration", desc: "Integrate machine learning into your existing systems. From recommendation engines to fraud detection, our ML solutions bring added value to your business operations." },
+  { icon: <Eye size={24} />, color: "#B39DDB", title: "Image Recognition", desc: "Accurate classification and identification of elements within your images. Working closely with your data to ensure effective recognition tailored to your use case." },
+  { icon: <MessageSquare size={24} />, color: "#E8A0BF", title: "NLP & Text Analysis", desc: "Advanced NLP solutions sentiment analysis, topic modelling, entity recognition, and text classification to uncover trends and drive better decision-making." },
+  { icon: <ScanFace size={24} />, color: "#80CBC4", title: "Secure Facial Biometrics", desc: "Speed, accuracy, and ease of use. Leveraging advanced ML algorithms for accurate identification of individuals, even under challenging lighting or environmental conditions." },
 ];
 
 export default function AIDevelopmentPage() {
   return (
     <>
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / AI Development</div>
@@ -60,29 +32,29 @@ export default function AIDevelopmentPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Services</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Comprehensive AI and machine learning solutions tailored to your business.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Our AI Services</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">Comprehensive AI and machine learning solutions tailored to your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {aiServices.map((s) => (
-              <div key={s.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center text-blue-600 bg-blue-50 mb-5">
+              <div key={s.title} className="rounded-2xl p-7 hover:-translate-y-1 transition-all" style={{ backgroundColor: s.color }}>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/10 mb-5 text-gray-900">
                   {s.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{s.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{s.title}</h3>
+                <p className="text-sm text-gray-800 leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Common Questions</h2>
+          <h2 className="text-3xl font-bold text-white mb-10 text-center">Common Questions</h2>
           <FAQAccordion items={[
             { question: "What types of AI solutions do you offer?", answer: "We provide custom AI applications, AI-powered chatbots, predictive analytics, machine learning models, and AI-driven automation tools tailored to your specific business needs." },
             { question: "How can AI benefit my business?", answer: "AI can automate repetitive tasks, enhance customer service, provide data-driven insights, improve decision-making, and help you stay ahead of competitors in a rapidly evolving digital landscape." },

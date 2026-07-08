@@ -2,42 +2,18 @@ import Link from "next/link";
 import { ArrowRight, Search, Target, TrendingUp, FileText, Layout, Link2 } from "lucide-react";
 
 const seoServices = [
-  {
-    icon: <Target size={24} />,
-    title: "Competitor Analysis",
-    desc: "We identify your industry rivals and examine their marketing strategies, comparing and assessing your business's strengths and areas for improvement to help you stay ahead in the market.",
-  },
-  {
-    icon: <TrendingUp size={24} />,
-    title: "SEO Strategy",
-    desc: "A content calendar based on relevant topics, keywords, and industry trends, positioning your content to rank higher in search engine results and attract organic traffic.",
-  },
-  {
-    icon: <FileText size={24} />,
-    title: "On-Page Optimisation",
-    desc: "From content creation to optimising meta descriptions and title tags, we handle everything to ensure your site performs at its best in search engine rankings.",
-  },
-  {
-    icon: <Layout size={24} />,
-    title: "Improved Content Structure",
-    desc: "We deliver content that is adaptable across any interface. Our improved content structure breaks down information into manageable components, ensuring user-friendly accessibility.",
-  },
-  {
-    icon: <Search size={24} />,
-    title: "Landing Page Optimisation",
-    desc: "We optimise your landing pages using A/B testing and conversion rate optimisation techniques, ensuring your pages meet conversion goals and drive business results.",
-  },
-  {
-    icon: <Link2 size={24} />,
-    title: "Better Link Building",
-    desc: "By attracting high-quality and reliable backlinks, we boost your website's authority and visibility, making your content more valuable in the eyes of search engines.",
-  },
+  { icon: <Target size={24} />, color: "#E76F51", title: "Competitor Analysis", desc: "We identify your industry rivals and examine their marketing strategies, comparing and assessing your business's strengths and areas for improvement to help you stay ahead in the market." },
+  { icon: <TrendingUp size={24} />, color: "#8AB17D", title: "SEO Strategy", desc: "A content calendar based on relevant topics, keywords, and industry trends, positioning your content to rank higher in search engine results and attract organic traffic." },
+  { icon: <FileText size={24} />, color: "#E9C46A", title: "On-Page Optimisation", desc: "From content creation to optimising meta descriptions and title tags, we handle everything to ensure your site performs at its best in search engine rankings." },
+  { icon: <Layout size={24} />, color: "#6FA8DC", title: "Improved Content Structure", desc: "We deliver content that is adaptable across any interface. Our improved content structure breaks down information into manageable components, ensuring user-friendly accessibility." },
+  { icon: <Search size={24} />, color: "#B39DDB", title: "Landing Page Optimisation", desc: "We optimise your landing pages using A/B testing and conversion rate optimisation techniques, ensuring your pages meet conversion goals and drive business results." },
+  { icon: <Link2 size={24} />, color: "#E8A0BF", title: "Better Link Building", desc: "By attracting high-quality and reliable backlinks, we boost your website's authority and visibility, making your content more valuable in the eyes of search engines." },
 ];
 
 export default function SEOPage() {
   return (
     <>
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / SEO</div>
@@ -54,20 +30,20 @@ export default function SEOPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our SEO Services</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Comprehensive SEO strategies that rank your business higher and convert visitors into customers.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Our SEO Services</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">Comprehensive SEO strategies that rank your business higher and convert visitors into customers.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {seoServices.map((s) => (
-              <div key={s.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center text-blue-600 bg-blue-50 mb-5">
+              <div key={s.title} className="rounded-2xl p-7 hover:-translate-y-1 transition-all" style={{ backgroundColor: s.color }}>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/10 mb-5 text-gray-900">
                   {s.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{s.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{s.title}</h3>
+                <p className="text-sm text-gray-800 leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>

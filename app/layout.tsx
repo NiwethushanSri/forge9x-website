@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ThemeProvider from "@/components/ThemeProvider";
+import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
   title: "Forge9x | Web Development, AI & Digital Solutions",
   description: "Forge9x specialises in custom web development, AI solutions, mobile apps, SEO, and graphic design. We help businesses build, grow, and maintain a powerful web presence.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -29,17 +33,9 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main className="flex-1 pt-16 sm:pt-20 lg:pt-24 min-w-0">{children}</main>
-          {/* Sri Lanka Business Banner */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <a href="/contact" className="block w-full overflow-hidden">
-            <img
-              src="/sri-lanka-banner.jpg"
-              alt="Starting a Business in Sri Lanka? Forge9x is Here to Help"
-              className="w-full block"
-            />
-          </a>
           <Footer />
           <WhatsAppButton />
+          <CookieBanner />
         </ThemeProvider>
       </body>
     </html>

@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, MapPin, Clock, Briefcase, CheckCircle } from "lucide-react";
 
 const openings = [
@@ -48,7 +48,7 @@ const perks = [
 export default function CareersPage() {
   return (
     <>
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white border-t border-gray-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -63,11 +63,11 @@ export default function CareersPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
       {/* Perks */}
-      <section className="bg-black py-16">
+      <section className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -84,19 +84,13 @@ export default function CareersPage() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl p-10 text-white" style={{ background: "linear-gradient(135deg, #00679A 0%, #004e75 100%)" }}>
-              <div className="text-3xl font-black mb-2">
-                <span style={{ color: "#FFCC33" }}>Forge</span><span>9x</span>
-              </div>
-              <p className="text-blue-100 mb-8">Cutting-edge IT solutions, powered by great people.</p>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                {[["Remote First", "Work from anywhere"], ["Fast Growth", "Expanding team"], ["Great Tech", "Latest tools"], ["Real Impact", "Client results"]].map(([t, s]) => (
-                  <div key={t} className="bg-white/10 rounded-xl p-4">
-                    <div className="font-semibold">{t}</div>
-                    <div className="text-sm text-blue-200">{s}</div>
-                  </div>
-                ))}
-              </div>
+            <div className="w-full">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/office-woman.jpg"
+                alt="Forge9x team at work"
+                className="w-full aspect-[4/3] lg:aspect-auto lg:h-full object-cover rounded-2xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
@@ -104,11 +98,11 @@ export default function CareersPage() {
 
       {/* Divider */}
       <div className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-900" />
       </div>
 
       {/* Open Positions */}
-      <section className="bg-black py-20">
+      <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
@@ -116,7 +110,7 @@ export default function CareersPage() {
           </div>
           <div className="flex flex-col gap-5">
             {openings.map((job) => (
-              <div key={job.title} className="bg-gray-900 rounded-2xl p-7 border border-gray-800">
+              <div key={job.title} className="bg-[#0a0a0a] rounded-2xl p-7 border border-gray-900">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -152,7 +146,7 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>Don't See Your Role?</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>We're always open to hearing from talented people. Send us your CV and let us know how you can contribute.</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">
             Get in Touch <ArrowRight size={16} />
           </Link>
         </div>
