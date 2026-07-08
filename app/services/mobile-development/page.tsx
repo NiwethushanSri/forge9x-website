@@ -43,7 +43,7 @@ export default function MobileDevelopmentPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / Mobile Development</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Mobile <span style={{ color: "#FFCC33" }}>Development</span> Services
+              Mobile Development Services
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               We develop iOS and Android apps that retain potential customers and drive business growth. Secure code, powerful back-end systems, and exceptional UI   with ongoing support and maintenance.

@@ -42,7 +42,7 @@ export default function WebApplicationsPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / Web Applications</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Web Application <span style={{ color: "#FFCC33" }}>Development</span>
+              Web Application Development
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               At Forge9x, we believe impactful software has the power to keep customers engaged longer than they intended. We create easy-to-use, efficient, and customer-centric solutions that fuel business growth.

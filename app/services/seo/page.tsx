@@ -42,7 +42,7 @@ export default function SEOPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / SEO</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Search Engine <span style={{ color: "#FFCC33" }}>Optimisation</span>
+              Search Engine Optimisation
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               What's a business without SEO? A missed opportunity! At Forge9x, we analyse market demand and implement proven techniques to drive traffic that converts into sales.

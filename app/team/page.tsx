@@ -45,7 +45,7 @@ export default function TeamPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Company / Our Team</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Meet Our <span style={{ color: "#FFCC33" }}>Team</span>
+              Meet Our Team
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
               The passionate technologists, strategists, and innovators behind Forge9X — building the future, one solution at a time.
@@ -53,6 +53,11 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Team Members */}
       <section className="bg-black py-20">
@@ -121,6 +126,11 @@ export default function TeamPage() {
           ))}
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Join CTA */}
       <section className="bg-black py-16">

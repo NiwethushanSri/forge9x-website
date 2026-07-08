@@ -81,7 +81,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Insights & <span style={{ color: "#FFCC33" }}>Resources</span>
+              Insights & Resources
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
               Expert perspectives on web development, AI, mobile, SEO, and digital growth strategies to help your business thrive.
@@ -89,6 +89,11 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

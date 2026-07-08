@@ -26,7 +26,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span style={{ color: "#FFCC33" }}>Forge9x</span>
+              About Forge9x
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
               At Forge9x, we turn ideas into reality with cutting-edge IT solutions. Backed by years of experience, we provide innovative software services designed to empower businesses of all sizes.
@@ -34,6 +34,11 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Mission */}
       <section className="bg-black py-20">
@@ -62,6 +67,11 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Why Choose Us */}
       <section className="bg-black py-20">

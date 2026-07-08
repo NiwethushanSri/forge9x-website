@@ -68,13 +68,18 @@ export default function PricingPage() {
       <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Transparent <span style={{ color: "#FFCC33" }}>Pricing</span>
+            Transparent Pricing
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Simple, honest pricing with no hidden fees. Choose the plan that fits your business, or get a custom quote.
           </p>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Main Plans */}
       <section className="bg-black py-20">
@@ -118,6 +123,11 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Maintenance Plans */}
       <section className="bg-black py-16">

@@ -52,7 +52,7 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Join <span style={{ color: "#FFCC33" }}>Forge9x</span>
+              Join Forge9x
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
               We're a growing team of passionate technologists, designers, and strategists. If you love building things that make a real difference, we'd love to hear from you.
@@ -60,6 +60,11 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Perks */}
       <section className="bg-black py-16">
@@ -96,6 +101,11 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Open Positions */}
       <section className="bg-black py-20">

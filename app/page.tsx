@@ -81,7 +81,7 @@ export default function Home() {
               UK-Based Digital Innovation Agency
             </div>
             <h1 className="font-bold leading-tight mb-5 sm:mb-6 text-4xl sm:text-6xl lg:text-7xl">
-              Build. Grow. <span style={{ color: "#FFCC33" }}>Dominate</span> Your Digital Presence.
+              Build. Grow. Dominate Your Digital Presence.
             </h1>
             <p className="text-white font-semibold leading-relaxed mb-4 text-xl sm:text-2xl max-w-2xl">
               Where bold ideas become intelligent digital experiences.
@@ -108,6 +108,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
+
       {/* Stats */}
       <section className="bg-black border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,6 +133,11 @@ export default function Home() {
         <TechMarquee />
       </section>
 
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       {/* Services */}
       <section className="bg-black py-20">

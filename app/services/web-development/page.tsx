@@ -46,7 +46,7 @@ export default function WebDevelopmentPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / Web Development</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Web Development <span style={{ color: "#FFCC33" }}>Services</span>
+              Web Development Services
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Going digital without a website? A big no-no! Your website is the core of your digital presence. With Forge9x's expert web development, your business can operate at full capacity.

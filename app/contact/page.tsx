@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Get in <span style={{ color: "#FFCC33" }}>Touch</span>
+              Get in Touch
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
               Let Forge9x help you unlock the true potential of your business. Reach out and let's start building something great together.
@@ -31,6 +31,11 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -30,7 +30,7 @@ export default function GraphicDesignPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / Graphic Design</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Graphic <span style={{ color: "#FFCC33" }}>Design</span> Services
+              Graphic Design Services
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               At Forge9x, graphic design is more than aesthetics   it's about crafting visual content that engages, communicates effectively, and delivers results. Every design is built around your business goals.

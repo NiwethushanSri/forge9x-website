@@ -48,7 +48,7 @@ export default function AIDevelopmentPage() {
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / AI Development</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              AI <span style={{ color: "#FFCC33" }}>Development</span> Services
+              AI Development Services
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               At Forge9x, we deliver innovative AI development services that transform your business. By leveraging the power of artificial intelligence, we create custom solutions that improve efficiency, enhance customer interactions, and drive sustainable growth.

@@ -34,7 +34,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Case <span style={{ color: "#FFCC33" }}>Studies</span>
+              Case Studies
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
               Boost your digital potential. Real projects, real results — see how Forge9x helps businesses turn bold ideas into powerful digital products.
@@ -42,6 +42,11 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800" />
+      </div>
 
       <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
