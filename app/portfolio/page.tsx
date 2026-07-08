@@ -8,17 +8,17 @@ import { ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
 const categories = ["All", "Web Development", "Web Applications", "AI", "Mobile", "Graphic Design"];
 
 const projects = [
+  { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], image: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
+  { title: "Mangala Matrimony", category: "Mobile", desc: "A matrimonial matchmaking platform connecting Sri Lankan singles worldwide, with profile creation, matching, and secure account access.", tags: ["Matchmaking", "Mobile", "SaaS"], image: "/portfolio/managala.jpg", url: "https://mangala.love" },
   { title: "E-Commerce Platform", category: "Web Development", desc: "A fully custom WooCommerce store with advanced product filtering, custom checkout flow, and inventory management.", tags: ["WordPress", "WooCommerce", "PHP"], image: "/portfolio/ecommerce.jpg" },
   { title: "CRM System", category: "Web Applications", desc: "A custom-built CRM to manage customer interactions, sales pipelines, and automated follow-ups for a UK-based SME.", tags: ["React", "Node.js", "PostgreSQL"], image: "/portfolio/crm.jpg" },
   { title: "AI Chatbot Integration", category: "AI", desc: "Intelligent customer service bot with NLP capabilities, integrated into a retail platform to handle 80% of support queries.", tags: ["Python", "NLP", "API"], image: "/portfolio/ai-chatbot.jpg" },
   { title: "Restaurant Booking App", category: "Mobile", desc: "Cross-platform iOS & Android app for restaurant reservations with real-time availability and push notifications.", tags: ["React Native", "Firebase"], image: "/portfolio/restaurant.jpg" },
   { title: "Corporate Brand Identity", category: "Graphic Design", desc: "Full visual identity package including logo, brand guidelines, business cards, letterheads, and social media templates.", tags: ["Branding", "Print", "Digital"], image: "/portfolio/branding.jpg" },
   { title: "Logistics Management System", category: "Web Applications", desc: "End-to-end logistics platform covering inventory, order processing, shipping tracking, and returns management.", tags: ["Next.js", "TypeScript", "MySQL"], image: "/portfolio/logistics.jpg" },
-  { title: "SEO Campaign   Law Firm", category: "Web Development", desc: "A comprehensive SEO overhaul that improved organic traffic by 340% in 6 months through content strategy and link building.", tags: ["SEO", "Content", "Analytics"], image: "/portfolio/seo.jpg" },
+  { title: "SEO Campaign Law Firm", category: "Web Development", desc: "A comprehensive SEO overhaul that improved organic traffic by 340% in 6 months through content strategy and link building.", tags: ["SEO", "Content", "Analytics"], image: "/portfolio/seo.jpg" },
   { title: "Healthcare Appointment System", category: "Web Applications", desc: "Cloud-based appointment booking system for a multi-clinic healthcare group with calendar sync and SMS reminders.", tags: ["React", "AWS", "Twilio"], image: "/portfolio/healthcare.jpg" },
   { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"], image: "/portfolio/biometrics.jpg" },
-  { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], image: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
-  { title: "Mangala Matrimony", category: "Mobile", desc: "A matrimonial matchmaking platform connecting Sri Lankan singles worldwide, with profile creation, matching, and secure account access.", tags: ["Matchmaking", "Mobile", "SaaS"], image: "/portfolio/mangala.jpg", url: "https://mangala.love" },
 ];
 
 export default function PortfolioPage() {
