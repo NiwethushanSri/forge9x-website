@@ -112,22 +112,22 @@ export default function TestimonialsMarquee() {
     <div className="relative w-full">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to right, #f9fafb, transparent)" }} />
+        style={{ background: "linear-gradient(to right, #000000, transparent)" }} />
       <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to left, #f9fafb, transparent)" }} />
+        style={{ background: "linear-gradient(to left, #000000, transparent)" }} />
 
       <div className="flex gap-6" style={{ animation: "marquee 60s linear infinite", width: "max-content" }}>
         {doubled.map((t, i) => (
           <div
             key={i}
-            className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col gap-3"
+            className="bg-gray-900 rounded-2xl border border-gray-800 p-6 flex flex-col gap-3"
             style={{ width: "min(320px, 85vw)", flexShrink: 0 }}
           >
             <Stars />
-            <p className="text-gray-600 text-sm leading-relaxed flex-1">
+            <p className="text-gray-400 text-sm leading-relaxed flex-1">
               &ldquo;{t.review}&rdquo;
             </p>
-            <div className="flex items-center gap-3 mt-2 pt-4 border-t border-gray-100">
+            <div className="flex items-center gap-3 mt-2 pt-4 border-t border-gray-800">
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
                 style={{ backgroundColor: t.color }}
@@ -135,8 +135,8 @@ export default function TestimonialsMarquee() {
                 {t.avatar}
               </div>
               <div>
-                <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
-                <div className="text-xs text-gray-400">{t.role} · {t.country}</div>
+                <div className="font-semibold text-white text-sm">{t.name}</div>
+                <div className="text-xs text-gray-500">{t.role} · {t.country}</div>
               </div>
             </div>
           </div>

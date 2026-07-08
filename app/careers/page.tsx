@@ -48,7 +48,7 @@ const perks = [
 export default function CareersPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+      <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -62,18 +62,18 @@ export default function CareersPage() {
       </section>
 
       {/* Perks */}
-      <section className="bg-white py-16">
+      <section className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Work at Forge9x?</h2>
-              <p className="text-gray-500 leading-relaxed mb-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Forge9x?</h2>
+              <p className="text-gray-400 leading-relaxed mb-8">
                 At Forge9x, we believe our team is our greatest asset. We invest in our people, foster creativity, and build a culture where great ideas thrive.
               </p>
               <ul className="flex flex-col gap-3">
                 {perks.map((perk) => (
-                  <li key={perk} className="flex items-center gap-3 text-gray-700">
-                    <CheckCircle size={18} className="text-blue-600 shrink-0" />
+                  <li key={perk} className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle size={18} className="text-blue-400 shrink-0" />
                     {perk}
                   </li>
                 ))}
@@ -98,29 +98,29 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Open Positions</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Join our growing team and help us deliver exceptional digital solutions.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">Join our growing team and help us deliver exceptional digital solutions.</p>
           </div>
           <div className="flex flex-col gap-5">
             {openings.map((job) => (
-              <div key={job.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
+              <div key={job.title} className="bg-gray-900 rounded-2xl p-7 border border-gray-800">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
-                      <h3 className="text-lg font-semibold text-gray-900">{job.title}</h3>
-                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-600">{job.dept}</span>
+                      <h3 className="text-lg font-semibold text-white">{job.title}</h3>
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400">{job.dept}</span>
                     </div>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
                       <span className="flex items-center gap-1"><Briefcase size={14} /> {job.type}</span>
                       <span className="flex items-center gap-1"><MapPin size={14} /> {job.location}</span>
                     </div>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-4">{job.desc}</p>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-4">{job.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {job.requirements.map((r) => (
-                        <span key={r} className="px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600">{r}</span>
+                        <span key={r} className="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-300">{r}</span>
                       ))}
                     </div>
                   </div>
@@ -140,8 +140,8 @@ export default function CareersPage() {
 
       <section className="py-16" style={{ backgroundColor: "#FFCC33" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Don't See Your Role?</h2>
-          <p className="text-gray-800 mb-8 max-w-xl mx-auto">We're always open to hearing from talented people. Send us your CV and let us know how you can contribute.</p>
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>Don't See Your Role?</h2>
+          <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>We're always open to hearing from talented people. Send us your CV and let us know how you can contribute.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
             Get in Touch <ArrowRight size={16} />
           </Link>

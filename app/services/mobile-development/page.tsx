@@ -38,7 +38,7 @@ const process = [
 export default function MobileDevelopmentPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+      <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / Mobile Development</div>

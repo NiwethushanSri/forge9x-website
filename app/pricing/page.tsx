@@ -4,7 +4,7 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "£999",
+    price: "£299",
     period: "one-off",
     desc: "Perfect for small businesses and startups needing a strong digital presence.",
     features: [
@@ -20,7 +20,7 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "£2,499",
+    price: "£599",
     period: "one-off",
     desc: "For growing businesses that need a feature-rich website and marketing tools.",
     features: [
@@ -65,7 +65,7 @@ const maintenance = [
 export default function PricingPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+      <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Transparent <span style={{ color: "#FFCC33" }}>Pricing</span>
@@ -77,16 +77,16 @@ export default function PricingPage() {
       </section>
 
       {/* Main Plans */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Website Development Packages</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Website Development Packages</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`rounded-2xl p-8 border flex flex-col ${plan.highlight ? "shadow-xl border-blue-500 relative" : "bg-white border-gray-100 shadow-sm"}`}
+                className={`rounded-2xl p-8 border flex flex-col ${plan.highlight ? "shadow-xl border-blue-500 relative" : "bg-gray-900 border-gray-800"}`}
                 style={plan.highlight ? { backgroundColor: "#00679A" } : {}}
               >
                 {plan.highlight && (
@@ -94,15 +94,15 @@ export default function PricingPage() {
                     Most Popular
                   </div>
                 )}
-                <div className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-blue-200" : "text-blue-600"}`}>{plan.name}</div>
-                <div className={`text-4xl font-black mb-1 ${plan.highlight ? "text-white" : "text-gray-900"}`}>{plan.price}</div>
-                <div className={`text-sm mb-4 ${plan.highlight ? "text-blue-200" : "text-gray-400"}`}>{plan.period}</div>
-                <p className={`text-sm mb-6 leading-relaxed ${plan.highlight ? "text-blue-100" : "text-gray-500"}`}>{plan.desc}</p>
+                <div className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-blue-200" : "text-blue-400"}`}>{plan.name}</div>
+                <div className={`text-4xl font-black mb-1 ${plan.highlight ? "text-white" : "text-white"}`}>{plan.price}</div>
+                <div className={`text-sm mb-4 ${plan.highlight ? "text-blue-200" : "text-gray-500"}`}>{plan.period}</div>
+                <p className={`text-sm mb-6 leading-relaxed ${plan.highlight ? "text-blue-100" : "text-gray-400"}`}>{plan.desc}</p>
                 <ul className="flex flex-col gap-3 mb-8 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-center gap-2 text-sm">
-                      <CheckCircle size={16} className={plan.highlight ? "text-blue-200" : "text-blue-600"} />
-                      <span className={plan.highlight ? "text-white" : "text-gray-700"}>{f}</span>
+                      <CheckCircle size={16} className={plan.highlight ? "text-blue-200" : "text-blue-400"} />
+                      <span className={plan.highlight ? "text-white" : "text-gray-300"}>{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -120,21 +120,21 @@ export default function PricingPage() {
       </section>
 
       {/* Maintenance Plans */}
-      <section className="bg-white py-16">
+      <section className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Website Maintenance Plans</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Keep your website secure, fast, and up-to-date with our ongoing support packages.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Website Maintenance Plans</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">Keep your website secure, fast, and up-to-date with our ongoing support packages.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {maintenance.map((m) => (
-              <div key={m.name} className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
-                <div className="text-blue-600 font-semibold mb-1">{m.name}</div>
-                <div className="text-2xl font-bold text-gray-900 mb-4">{m.price}</div>
+              <div key={m.name} className="bg-gray-900 rounded-2xl p-7 border border-gray-800">
+                <div className="text-blue-400 font-semibold mb-1">{m.name}</div>
+                <div className="text-2xl font-bold text-white mb-4">{m.price}</div>
                 <ul className="flex flex-col gap-3">
                   {m.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle size={15} className="text-blue-600 shrink-0" />
+                    <li key={f} className="flex items-center gap-2 text-sm text-gray-300">
+                      <CheckCircle size={15} className="text-blue-400 shrink-0" />
                       {f}
                     </li>
                   ))}
@@ -147,8 +147,8 @@ export default function PricingPage() {
 
       <section className="py-16" style={{ backgroundColor: "#FFCC33" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Need a Custom Quote?</h2>
-          <p className="text-gray-800 mb-8 max-w-xl mx-auto">Every project is unique. Contact us for a tailored quote that fits your specific requirements and budget.</p>
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>Need a Custom Quote?</h2>
+          <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>Every project is unique. Contact us for a tailored quote that fits your specific requirements and budget.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
             Get a Custom Quote <ArrowRight size={16} />
           </Link>

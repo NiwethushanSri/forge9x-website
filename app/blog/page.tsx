@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Clock, User } from "lucide-react";
 
 const posts = [
@@ -10,6 +11,7 @@ const posts = [
     author: "Forge9x Team",
     date: "15 June 2025",
     readTime: "5 min read",
+    image: "/blog/web-development.jpg",
   },
   {
     slug: "ai-transforming-business-operations",
@@ -19,6 +21,7 @@ const posts = [
     author: "Forge9x Team",
     date: "2 June 2025",
     readTime: "7 min read",
+    image: "/blog/ai-development.jpg",
   },
   {
     slug: "seo-guide-for-small-businesses",
@@ -28,6 +31,7 @@ const posts = [
     author: "Forge9x Team",
     date: "20 May 2025",
     readTime: "8 min read",
+    image: "/blog/seo.jpg",
   },
   {
     slug: "mobile-app-development-guide",
@@ -37,6 +41,7 @@ const posts = [
     author: "Forge9x Team",
     date: "10 May 2025",
     readTime: "6 min read",
+    image: "/blog/mobile-development.jpg",
   },
   {
     slug: "erp-system-benefits",
@@ -46,6 +51,7 @@ const posts = [
     author: "Forge9x Team",
     date: "28 April 2025",
     readTime: "6 min read",
+    image: "/blog/web-applications.jpg",
   },
   {
     slug: "graphic-design-brand-identity",
@@ -55,22 +61,23 @@ const posts = [
     author: "Forge9x Team",
     date: "15 April 2025",
     readTime: "4 min read",
+    image: "/blog/graphic-design.jpg",
   },
 ];
 
 const categoryColors: Record<string, string> = {
-  "Web Development": "bg-blue-50 text-blue-600",
-  "AI Development": "bg-purple-50 text-purple-600",
-  "SEO": "bg-green-50 text-green-600",
-  "Mobile Development": "bg-orange-50 text-orange-600",
-  "Web Applications": "bg-indigo-50 text-indigo-600",
-  "Graphic Design": "bg-pink-50 text-pink-600",
+  "Web Development": "bg-blue-500/10 text-blue-400",
+  "AI Development": "bg-purple-500/10 text-purple-400",
+  "SEO": "bg-green-500/10 text-green-400",
+  "Mobile Development": "bg-orange-500/10 text-orange-400",
+  "Web Applications": "bg-indigo-500/10 text-indigo-400",
+  "Graphic Design": "bg-pink-500/10 text-pink-400",
 };
 
 export default function BlogPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+      <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -83,23 +90,27 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
-                <div className="h-44 flex items-center justify-center" style={{ background: "linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)" }}>
-                  <span className="text-5xl font-black" style={{ color: "#00679A" }}>
-                    {post.title.charAt(0)}
-                  </span>
+              <article key={post.slug} className="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all flex flex-col">
+                <div className="h-44 relative overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 w-fit ${categoryColors[post.category] || "bg-gray-100 text-gray-600"}`}>
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 w-fit ${categoryColors[post.category] || "bg-gray-800 text-gray-300"}`}>
                     {post.category}
                   </span>
-                  <h2 className="text-lg font-semibold text-gray-900 mb-3 leading-snug">{post.title}</h2>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-gray-100">
+                  <h2 className="text-lg font-semibold text-white mb-3 leading-snug">{post.title}</h2>
+                  <p className="text-sm text-gray-400 leading-relaxed mb-4 flex-1">{post.excerpt}</p>
+                  <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-800">
                     <div className="flex items-center gap-1">
                       <User size={12} />
                       {post.author}

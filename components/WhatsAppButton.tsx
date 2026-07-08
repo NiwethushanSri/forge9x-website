@@ -1,23 +1,44 @@
 "use client";
 
-import { useState } from "react";
-import { X, MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { X, MessageCircle, ArrowUp } from "lucide-react";
 
 const WHATSAPP_NUMBER = "447466008727"; // UK number without + or spaces
 const MESSAGE = encodeURIComponent("Hi Forge9x! I'd like to discuss a project.");
 
 export default function WhatsAppButton() {
   const [open, setOpen] = useState(false);
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 300);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleChat = () => {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${MESSAGE}`, "_blank");
   };
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <div className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
+      {/* Back to top */}
+      {showTop && (
+        <button
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          className="w-11 h-11 rounded-md bg-black flex items-center justify-center shadow-lg hover:brightness-125 transition-all active:scale-95"
+        >
+          <ArrowUp size={20} color="white" />
+        </button>
+      )}
+
       {/* Popup card */}
       {open && (
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 w-64 sm:w-72 overflow-hidden animate-slideUp">
+        <div className="bg-gray-900 rounded-2xl shadow-2xl border border-gray-800 w-64 sm:w-72 overflow-hidden animate-slideUp">
           {/* Header */}
           <div className="flex items-center gap-3 p-4" style={{ backgroundColor: "#25D366" }}>
             <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
@@ -39,18 +60,18 @@ export default function WhatsAppButton() {
           </div>
 
           {/* Chat bubble */}
-          <div className="p-4 bg-[#ECE5DD]">
-            <div className="bg-white rounded-xl rounded-tl-none px-4 py-3 shadow-sm max-w-[90%]">
-              <p className="text-gray-800 text-sm leading-relaxed">
+          <div className="p-4 bg-[#0b141a]">
+            <div className="bg-gray-800 rounded-xl rounded-tl-none px-4 py-3 shadow-sm max-w-[90%]">
+              <p className="text-gray-200 text-sm leading-relaxed">
                 👋 Hi there! Welcome to <strong>Forge9x</strong>.<br />
                 How can we help you today?
               </p>
-              <div className="text-gray-400 text-xs mt-1 text-right">Just now</div>
+              <div className="text-gray-500 text-xs mt-1 text-right">Just now</div>
             </div>
           </div>
 
           {/* CTA */}
-          <div className="p-3 bg-[#ECE5DD] border-t border-black/5">
+          <div className="p-3 bg-[#0b141a] border-t border-white/5">
             <button
               onClick={handleChat}
               className="w-full py-3 rounded-xl text-sm font-bold text-white flex items-center justify-center gap-2 transition-all hover:brightness-110 active:scale-95"

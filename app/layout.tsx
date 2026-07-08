@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ThemeProvider from "@/components/ThemeProvider";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
@@ -23,21 +24,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} h-full`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col antialiased">
-        <Navbar />
-        <main className="flex-1 pt-16 sm:pt-20 lg:pt-24 min-w-0">{children}</main>
-        {/* Sri Lanka Business Banner */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <a href="/contact" className="block w-full overflow-hidden">
-          <img
-            src="/sri-lanka-banner.jpg"
-            alt="Starting a Business in Sri Lanka? Forge9x is Here to Help"
-            className="w-full block"
-          />
-        </a>
-        <Footer />
-        <WhatsAppButton />
+        <ThemeProvider>
+          <Navbar />
+          <main className="flex-1 pt-16 sm:pt-20 lg:pt-24 min-w-0">{children}</main>
+          {/* Sri Lanka Business Banner */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <a href="/contact" className="block w-full overflow-hidden">
+            <img
+              src="/sri-lanka-banner.jpg"
+              alt="Starting a Business in Sri Lanka? Forge9x is Here to Help"
+              className="w-full block"
+            />
+          </a>
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   );

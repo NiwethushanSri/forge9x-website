@@ -25,7 +25,7 @@ const deliverables = [
 export default function GraphicDesignPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+      <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="text-sm font-medium text-blue-300 mb-4">Services / Graphic Design</div>
@@ -76,8 +76,8 @@ export default function GraphicDesignPage() {
 
       <section className="py-16" style={{ backgroundColor: "#FFCC33" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Let's Create Together!</h2>
-          <p className="text-gray-800 mb-8 max-w-xl mx-auto">Develop a strong visual identity that leaves a lasting impression and aligns with your brand's goals.</p>
+          <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>Let's Create Together!</h2>
+          <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>Develop a strong visual identity that leaves a lasting impression and aligns with your brand's goals.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
             Get in Touch <ArrowRight size={16} />
           </Link>

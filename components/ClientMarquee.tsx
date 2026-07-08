@@ -24,15 +24,15 @@ export default function ClientMarquee() {
     <div className="relative w-full">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to right, white, transparent)" }} />
+        style={{ background: "linear-gradient(to right, black, transparent)" }} />
       <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to left, white, transparent)" }} />
+        style={{ background: "linear-gradient(to left, black, transparent)" }} />
 
       <div className="flex" style={{ animation: "marquee 40s linear infinite" }}>
         {doubled.map((client, i) => (
           <div
             key={i}
-            className="flex-shrink-0 mx-4 flex items-center justify-center bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all"
+            className="flex-shrink-0 mx-4 flex items-center justify-center bg-gray-900 rounded-2xl border border-gray-800 hover:border-blue-800 hover:shadow-md transition-all"
             style={{ width: "clamp(100px, 20vw, 130px)", height: "90px" }}
           >
             <img

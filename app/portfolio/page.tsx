@@ -1,75 +1,104 @@
-﻿import Link from "next/link";
-import { ArrowRight, ExternalLink } from "lucide-react";
+﻿"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
 
 const categories = ["All", "Web Development", "Web Applications", "AI", "Mobile", "Graphic Design"];
 
 const projects = [
-  { title: "E-Commerce Platform", category: "Web Development", desc: "A fully custom WooCommerce store with advanced product filtering, custom checkout flow, and inventory management.", tags: ["WordPress", "WooCommerce", "PHP"] },
-  { title: "CRM System", category: "Web Applications", desc: "A custom-built CRM to manage customer interactions, sales pipelines, and automated follow-ups for a UK-based SME.", tags: ["React", "Node.js", "PostgreSQL"] },
-  { title: "AI Chatbot Integration", category: "AI", desc: "Intelligent customer service bot with NLP capabilities, integrated into a retail platform to handle 80% of support queries.", tags: ["Python", "NLP", "API"] },
-  { title: "Restaurant Booking App", category: "Mobile", desc: "Cross-platform iOS & Android app for restaurant reservations with real-time availability and push notifications.", tags: ["React Native", "Firebase"] },
-  { title: "Corporate Brand Identity", category: "Graphic Design", desc: "Full visual identity package including logo, brand guidelines, business cards, letterheads, and social media templates.", tags: ["Branding", "Print", "Digital"] },
-  { title: "Logistics Management System", category: "Web Applications", desc: "End-to-end logistics platform covering inventory, order processing, shipping tracking, and returns management.", tags: ["Next.js", "TypeScript", "MySQL"] },
-  { title: "SEO Campaign   Law Firm", category: "Web Development", desc: "A comprehensive SEO overhaul that improved organic traffic by 340% in 6 months through content strategy and link building.", tags: ["SEO", "Content", "Analytics"] },
-  { title: "Healthcare Appointment System", category: "Web Applications", desc: "Cloud-based appointment booking system for a multi-clinic healthcare group with calendar sync and SMS reminders.", tags: ["React", "AWS", "Twilio"] },
-  { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"] },
+  { title: "E-Commerce Platform", category: "Web Development", desc: "A fully custom WooCommerce store with advanced product filtering, custom checkout flow, and inventory management.", tags: ["WordPress", "WooCommerce", "PHP"], image: "/portfolio/ecommerce.jpg" },
+  { title: "CRM System", category: "Web Applications", desc: "A custom-built CRM to manage customer interactions, sales pipelines, and automated follow-ups for a UK-based SME.", tags: ["React", "Node.js", "PostgreSQL"], image: "/portfolio/crm.jpg" },
+  { title: "AI Chatbot Integration", category: "AI", desc: "Intelligent customer service bot with NLP capabilities, integrated into a retail platform to handle 80% of support queries.", tags: ["Python", "NLP", "API"], image: "/portfolio/ai-chatbot.jpg" },
+  { title: "Restaurant Booking App", category: "Mobile", desc: "Cross-platform iOS & Android app for restaurant reservations with real-time availability and push notifications.", tags: ["React Native", "Firebase"], image: "/portfolio/restaurant.jpg" },
+  { title: "Corporate Brand Identity", category: "Graphic Design", desc: "Full visual identity package including logo, brand guidelines, business cards, letterheads, and social media templates.", tags: ["Branding", "Print", "Digital"], image: "/portfolio/branding.jpg" },
+  { title: "Logistics Management System", category: "Web Applications", desc: "End-to-end logistics platform covering inventory, order processing, shipping tracking, and returns management.", tags: ["Next.js", "TypeScript", "MySQL"], image: "/portfolio/logistics.jpg" },
+  { title: "SEO Campaign   Law Firm", category: "Web Development", desc: "A comprehensive SEO overhaul that improved organic traffic by 340% in 6 months through content strategy and link building.", tags: ["SEO", "Content", "Analytics"], image: "/portfolio/seo.jpg" },
+  { title: "Healthcare Appointment System", category: "Web Applications", desc: "Cloud-based appointment booking system for a multi-clinic healthcare group with calendar sync and SMS reminders.", tags: ["React", "AWS", "Twilio"], image: "/portfolio/healthcare.jpg" },
+  { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"], image: "/portfolio/biometrics.jpg" },
+  { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], logo: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
+  { title: "Mangala Matrimony", category: "Mobile", desc: "A matrimonial matchmaking platform connecting Sri Lankan singles worldwide, with profile creation, matching, and secure account access.", tags: ["Matchmaking", "Mobile", "SaaS"], image: "/portfolio/mangala.jpg", url: "https://mangala.love" },
 ];
 
 export default function PortfolioPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects = activeCategory === "All"
+    ? projects
+    : projects.filter((p) => p.category === activeCategory);
+
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-24">
+      <section className="bg-black text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span style={{ color: "#FFCC33" }}>Work</span>
+              Case <span style={{ color: "#FFCC33" }}>Studies</span>
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Explore a selection of projects we've delivered for clients across multiple industries. From custom websites to AI solutions, every project tells a story of partnership and results.
+              Boost your digital potential. Real projects, real results — see how Forge9x helps businesses turn bold ideas into powerful digital products.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category pills */}
-          <div className="flex flex-wrap gap-3 mb-12 justify-center">
-            {categories.map((c) => (
-              <span
-                key={c}
-                className={`px-5 py-2 rounded-full text-sm font-medium cursor-pointer transition-colors border ${c === "All" ? "text-white border-transparent" : "bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600"}`}
-                style={c === "All" ? { backgroundColor: "#00679A", borderColor: "#00679A" } : {}}
-              >
-                {c}
-              </span>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12">
+            {/* Sidebar filters */}
+            <aside className="lg:sticky lg:top-28 lg:self-start">
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">Filter by Category</h3>
+              <ul className="flex flex-col gap-1">
+                {categories.map((c) => (
+                  <li key={c}>
+                    <button
+                      onClick={() => setActiveCategory(c)}
+                      className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-between group ${c === activeCategory ? "text-white" : "text-gray-400 hover:text-white"}`}
+                      style={c === activeCategory ? { backgroundColor: "#00679A" } : {}}
+                    >
+                      {c}
+                      <ChevronRight size={14} className={c === activeCategory ? "opacity-100" : "opacity-0 group-hover:opacity-50 transition-opacity"} />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </aside>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((p) => (
-              <div key={p.title} className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all group">
-                {/* Placeholder image */}
-                <div className="h-48 flex items-center justify-center" style={{ background: "linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%)" }}>
-                  <div className="text-center">
-                    <div className="text-4xl font-black mb-1" style={{ color: "#00679A" }}>
-                      {p.title.charAt(0)}
-                    </div>
-                    <div className="text-xs text-blue-400">{p.category}</div>
+            {/* Case study cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {filteredProjects.map((p) => (
+                <div key={p.title} className="group">
+                  <div className="aspect-[4/3] relative overflow-hidden rounded-2xl mb-5">
+                    {p.logo ? (
+                      <div className="w-full h-full flex items-center justify-center" style={{ background: "linear-gradient(135deg, #111827 0%, #1e293b 100%)" }}>
+                        <Image src={p.logo} alt={p.title} width={220} height={64} className="object-contain" />
+                      </div>
+                    ) : (
+                      <Image
+                        src={p.image!}
+                        alt={p.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    )}
                   </div>
+                  <div className="text-xs font-medium mb-2" style={{ color: "#5EA8D9" }}>{p.category}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{p.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed mb-4">{p.desc}</p>
+                  {p.url ? (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
+                      Read More <ExternalLink size={14} />
+                    </a>
+                  ) : (
+                    <Link href="/contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
+                      Read More <ArrowRight size={14} />
+                    </Link>
+                  )}
                 </div>
-                <div className="p-6">
-                  <div className="text-xs font-medium text-blue-600 mb-2">{p.category}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{p.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4">{p.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {p.tags.map((tag) => (
-                      <span key={tag} className="px-3 py-1 rounded-full text-xs bg-gray-100 text-gray-600">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -29,19 +29,19 @@ export default function Navbar() {
   const [mobileServices, setMobileServices] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-0.5 text-2xl sm:text-3xl lg:text-4xl font-black shrink-0" onClick={() => setMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-0.5 text-2xl sm:text-3xl lg:text-4xl font-black shrink-0 outline-none" onClick={() => setMenuOpen(false)}>
             <span style={{ color: "#00679A" }}>Forge</span>
             <span style={{ color: "#FFCC33" }}>9x</span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-9">
-            <Link href="/" className="text-lg font-semibold text-gray-700 hover:text-[#00679A] transition-colors whitespace-nowrap">
+            <Link href="/" className="text-lg font-semibold text-gray-200 hover:text-[#5EA8D9] transition-colors whitespace-nowrap outline-none">
               Home
             </Link>
 
@@ -51,16 +51,16 @@ export default function Navbar() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-lg font-semibold text-gray-700 hover:text-[#00679A] transition-colors whitespace-nowrap">
+              <button className="flex items-center gap-1 text-lg font-semibold text-gray-200 hover:text-[#5EA8D9] transition-colors whitespace-nowrap outline-none">
                 Services <ChevronDown size={18} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 w-56 bg-white rounded-xl shadow-lg border border-gray-100 pt-4 pb-2 z-50">
+                <div className="absolute top-full left-0 w-56 bg-gray-800 rounded-xl shadow-lg border border-gray-700 pt-4 pb-2 z-50">
                   {services.map((s) => (
                     <Link
                       key={s.href}
                       href={s.href}
-                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#00679A] transition-colors"
+                      className="block px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-700 hover:text-[#5EA8D9] transition-colors outline-none"
                       onClick={() => setServicesOpen(false)}
                     >
                       {s.label}
@@ -71,7 +71,7 @@ export default function Navbar() {
             </div>
 
             {navLinks.slice(1).map((link) => (
-              <Link key={link.href} href={link.href} className="text-lg font-semibold text-gray-700 hover:text-[#00679A] transition-colors whitespace-nowrap">
+              <Link key={link.href} href={link.href} className="text-lg font-semibold text-gray-200 hover:text-[#5EA8D9] transition-colors whitespace-nowrap outline-none">
                 {link.label}
               </Link>
             ))}
@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="hidden lg:flex shrink-0">
             <Link
               href="/contact"
-              className="px-7 py-3.5 text-lg font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap"
+              className="px-7 py-3.5 text-lg font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap outline-none"
               style={{ backgroundColor: "#00679A" }}
             >
               Get in Touch
@@ -90,7 +90,7 @@ export default function Navbar() {
 
           {/* Hamburger */}
           <button
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors ml-2"
+            className="lg:hidden p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors ml-2 outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -101,26 +101,26 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-black shadow-lg max-h-[80vh] overflow-y-auto">
           <nav className="flex flex-col px-4 py-3 gap-1">
-            <Link href="/" className="py-3 px-2 text-base font-semibold text-gray-800 border-b border-gray-50 hover:text-[#00679A]" onClick={() => setMenuOpen(false)}>
+            <Link href="/" className="py-3 px-2 text-base font-semibold text-gray-200 border-b border-gray-800 hover:text-[#5EA8D9] outline-none" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
 
             <button
-              className="flex items-center justify-between py-3 px-2 text-base font-semibold text-gray-800 border-b border-gray-50 hover:text-[#00679A] w-full text-left"
+              className="flex items-center justify-between py-3 px-2 text-base font-semibold text-gray-200 border-b border-gray-800 hover:text-[#5EA8D9] w-full text-left outline-none"
               onClick={() => setMobileServices(!mobileServices)}
             >
               Services
               <ChevronDown size={16} className={`transition-transform ${mobileServices ? "rotate-180" : ""}`} />
             </button>
             {mobileServices && (
-              <div className="bg-gray-50 rounded-xl mb-1">
+              <div className="bg-gray-800 rounded-xl mb-1">
                 {services.map((s) => (
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="block py-2.5 px-4 text-sm text-gray-600 hover:text-[#00679A] border-b border-gray-100 last:border-0"
+                    className="block py-2.5 px-4 text-sm text-gray-300 hover:text-[#5EA8D9] border-b border-gray-700 last:border-0 outline-none"
                     onClick={() => setMenuOpen(false)}
                   >
                     {s.label}
@@ -133,7 +133,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="py-3 px-2 text-base font-semibold text-gray-800 border-b border-gray-50 hover:text-[#00679A]"
+                className="py-3 px-2 text-base font-semibold text-gray-200 border-b border-gray-800 hover:text-[#5EA8D9] outline-none"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -142,7 +142,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="mt-3 mb-2 py-3 text-center text-base font-bold text-white rounded-xl"
+              className="mt-3 mb-2 py-3 text-center text-base font-bold text-white rounded-xl outline-none"
               style={{ backgroundColor: "#00679A" }}
               onClick={() => setMenuOpen(false)}
             >
