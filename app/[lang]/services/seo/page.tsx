@@ -24,7 +24,7 @@ export default async function SEOPage({ params }: { params: Promise<{ lang: stri
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               What's a business without SEO? A missed opportunity! At Forge9x, we analyse market demand and implement proven techniques to drive traffic that converts into sales.
             </p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               Boost Your Rankings <ArrowRight size={16} />
             </Link>
           </div>
@@ -55,7 +55,7 @@ export default async function SEOPage({ params }: { params: Promise<{ lang: stri
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Dominate Search Rankings?</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">Let Forge9x help you attract organic traffic that converts into real business growth.</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
             Start Your SEO Journey <ArrowRight size={16} />
           </Link>
         </div>

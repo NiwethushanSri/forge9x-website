@@ -58,10 +58,10 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               {t.heroDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link href={`/${lang}/contact`} className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-white transition-all hover:brightness-110 text-sm sm:text-base" style={{ backgroundColor: "#00679A" }}>
+              <Link href={`/contact`} className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-white transition-all hover:brightness-110 text-sm sm:text-base" style={{ backgroundColor: "#00679A" }}>
                 {t.startProject} <ArrowRight size={16} />
               </Link>
-              <Link href={`/${lang}/portfolio`} className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-white border border-white/20 hover:border-white/40 transition-colors text-sm sm:text-base">
+              <Link href={`/portfolio`} className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-white border border-white/20 hover:border-white/40 transition-colors text-sm sm:text-base">
                 {t.viewWork}
               </Link>
             </div>
@@ -98,7 +98,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {t.services.map((s, i) => (
-              <Link key={serviceHrefs[i]} href={`/${lang}/services/${serviceHrefs[i]}`} className="group rounded-2xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all" style={{ backgroundColor: serviceColors[i] }}>
+              <Link key={serviceHrefs[i]} href={`/services/${serviceHrefs[i]}`} className="group rounded-2xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all" style={{ backgroundColor: serviceColors[i] }}>
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-black/10 group-hover:bg-black/15 transition-colors" style={{ color: "#111827" }}>
                   {serviceIcons[i]}
                 </div>
@@ -122,10 +122,10 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">{t.whyTitle}</h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-10">{t.whyDesc}</p>
               <div className="flex items-center gap-4">
-                <Link href={`/${lang}/about`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white border border-white hover:bg-white hover:text-black transition-all w-fit">
+                <Link href={`/about`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white border border-white hover:bg-white hover:text-black transition-all w-fit">
                   {t.aboutUs}
                 </Link>
-                <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-black transition-all hover:opacity-90 w-fit" style={{ backgroundColor: "#FFCC33" }}>
+                <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-black transition-all hover:opacity-90 w-fit" style={{ backgroundColor: "#FFCC33" }}>
                   {dict.nav.getInTouch}
                 </Link>
               </div>
@@ -145,7 +145,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#111827" }}>{t.ctaTitle}</h2>
           <p className="text-lg mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>{t.ctaDesc}</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
             {t.ctaBtn} <ArrowRight size={18} />
           </Link>
         </div>

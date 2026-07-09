@@ -36,35 +36,35 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
   const [mobileHub, setMobileHub] = useState(false);
 
   const services = [
-    { label: dict.servicesList.webDev, href: `/${lang}/services/web-development` },
-    { label: dict.servicesList.webApps, href: `/${lang}/services/web-applications` },
-    { label: dict.servicesList.ai, href: `/${lang}/services/ai-development` },
-    { label: dict.servicesList.mobile, href: `/${lang}/services/mobile-development` },
-    { label: dict.servicesList.seo, href: `/${lang}/services/seo` },
-    { label: dict.servicesList.graphic, href: `/${lang}/services/graphic-design` },
+    { label: dict.servicesList.webDev, href: `/services/web-development` },
+    { label: dict.servicesList.webApps, href: `/services/web-applications` },
+    { label: dict.servicesList.ai, href: `/services/ai-development` },
+    { label: dict.servicesList.mobile, href: `/services/mobile-development` },
+    { label: dict.servicesList.seo, href: `/services/seo` },
+    { label: dict.servicesList.graphic, href: `/services/graphic-design` },
   ];
 
   const knowledgeHub = [
-    { label: dict.caseStudies, href: `/${lang}/case-studies` },
-    { label: dict.insights, href: `/${lang}/insights` },
+    { label: dict.caseStudies, href: `/case-studies` },
+    { label: dict.insights, href: `/insights` },
   ];
 
   const mainLinks = [
-    { label: dict.portfolio, href: `/${lang}/portfolio` },
-    { label: dict.careers, href: `/${lang}/careers` },
-    { label: dict.about, href: `/${lang}/about` },
-    { label: dict.pricing, href: `/${lang}/pricing` },
+    { label: dict.portfolio, href: `/portfolio` },
+    { label: dict.careers, href: `/careers` },
+    { label: dict.about, href: `/about` },
+    { label: dict.pricing, href: `/pricing` },
   ];
 
   const gridLinks = [
-    { label: dict.home, href: `/${lang}` },
-    { label: dict.portfolio, href: `/${lang}/portfolio` },
-    { label: dict.blog, href: `/${lang}/blog` },
-    { label: dict.team, href: `/${lang}/team` },
-    { label: dict.contact, href: `/${lang}/contact` },
-    { label: dict.careers, href: `/${lang}/careers` },
-    { label: dict.about, href: `/${lang}/about` },
-    { label: dict.pricing, href: `/${lang}/pricing` },
+    { label: dict.home, href: "/" },
+    { label: dict.portfolio, href: `/portfolio` },
+    { label: dict.blog, href: `/blog` },
+    { label: dict.team, href: `/team` },
+    { label: dict.contact, href: `/contact` },
+    { label: dict.careers, href: `/careers` },
+    { label: dict.about, href: `/about` },
+    { label: dict.pricing, href: `/pricing` },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
           <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
 
             {/* Logo */}
-            <Link href={`/${lang}`} className="flex items-center gap-0.5 text-2xl sm:text-3xl lg:text-4xl font-black shrink-0 outline-none" onClick={() => setGridOpen(false)}>
+            <Link href={"/"} className="flex items-center gap-0.5 text-2xl sm:text-3xl lg:text-4xl font-black shrink-0 outline-none" onClick={() => setGridOpen(false)}>
               <span style={{ color: "#FFFFFF" }}>Forge</span>
               <span style={{ color: "#FFCC33" }}>9x</span>
             </Link>
@@ -122,7 +122,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
 
             {/* Right side */}
             <div className="flex items-center gap-3">
-              <Link href={`/${lang}/contact`} className="hidden lg:inline-flex px-6 py-3 text-base font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap outline-none" style={{ backgroundColor: "#00679A" }}>
+              <Link href={`/contact`} className="hidden lg:inline-flex px-6 py-3 text-base font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap outline-none" style={{ backgroundColor: "#00679A" }}>
                 {dict.getInTouch}
               </Link>
 
@@ -194,7 +194,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
         </nav>
 
         <div className="px-8 py-6 border-t border-gray-800">
-          <Link href={`/${lang}/contact`} onClick={() => setGridOpen(false)} className="px-6 py-2.5 rounded-xl font-semibold text-white text-sm transition-all hover:brightness-110 inline-block" style={{ backgroundColor: "#00679A" }}>
+          <Link href={`/contact`} onClick={() => setGridOpen(false)} className="px-6 py-2.5 rounded-xl font-semibold text-white text-sm transition-all hover:brightness-110 inline-block" style={{ backgroundColor: "#00679A" }}>
             {dict.getInTouch}
           </Link>
         </div>

@@ -24,7 +24,7 @@ export default async function WebApplicationsPage({ params }: { params: Promise<
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               At Forge9x, we believe impactful software has the power to keep customers engaged longer than they intended. We create easy-to-use, efficient, and customer-centric solutions that fuel business growth.
             </p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               Discuss Your Project <ArrowRight size={16} />
             </Link>
           </div>
@@ -58,7 +58,7 @@ export default async function WebApplicationsPage({ params }: { params: Promise<
             <p className="text-blue-100 mb-8 max-w-xl mx-auto">
               Let Forge9x help you unlock new levels of success with powerful web application solutions.
             </p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
               Get Started <ArrowRight size={16} />
             </Link>
           </div>

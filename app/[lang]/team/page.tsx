@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import TeamPhoto from "@/components/TeamPhoto";
 import { getDictionary } from "@/lib/dictionaries";
@@ -26,7 +26,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>{t.ctaTitle}</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>{t.ctaDesc}</p>
-          <Link href={`/${lang}/careers`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">
+          <Link href={`/careers`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">
             {t.ctaBtn} <ArrowRight size={16} />
           </Link>
         </div>

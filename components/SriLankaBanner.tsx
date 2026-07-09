@@ -26,7 +26,7 @@ export default function SriLankaBanner({
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">{title}</h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">{desc}</p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               {btn} <ArrowRight size={16} />
             </Link>
           </div>

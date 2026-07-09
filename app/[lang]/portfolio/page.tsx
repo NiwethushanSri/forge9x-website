@@ -74,7 +74,7 @@ export default function PortfolioPage({ params }: { params: Promise<{ lang: Loca
                       {t.readMore} <ExternalLink size={14} />
                     </a>
                   ) : (
-                    <Link href={`/${lang}/contact`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
+                    <Link href={`/contact`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
                       {t.readMore} <ArrowRight size={14} />
                     </Link>
                   )}
@@ -89,7 +89,7 @@ export default function PortfolioPage({ params }: { params: Promise<{ lang: Loca
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">{t.ctaTitle}</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">{t.ctaDesc}</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
             {t.ctaBtn} <ArrowRight size={16} />
           </Link>
         </div>

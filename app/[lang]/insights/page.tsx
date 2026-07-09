@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
@@ -41,7 +41,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ lang:
             <div className="md:w-1/2 flex flex-col justify-center">
               <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 mb-4 w-fit">{featured.tag}</span>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{featured.title}</h2>
-              <Link href={`/${lang}/contact`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
+              <Link href={`/contact`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
                 {t.readMore} <ArrowRight size={14} />
               </Link>
             </div>
@@ -55,7 +55,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ lang:
                 </div>
                 <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-300 mb-2">{a.tag}</span>
                 <h3 className="text-sm font-semibold text-white mb-2 leading-snug">{a.title}</h3>
-                <Link href={`/${lang}/contact`} className="inline-flex items-center gap-1 text-xs font-semibold text-blue-400 hover:brightness-125 transition-all">
+                <Link href={`/contact`} className="inline-flex items-center gap-1 text-xs font-semibold text-blue-400 hover:brightness-125 transition-all">
                   {t.readMore} <ArrowRight size={12} />
                 </Link>
               </div>
@@ -67,7 +67,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ lang:
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">{t.ctaTitle}</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">{t.ctaDesc}</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
             {t.ctaBtn} <ArrowRight size={16} />
           </Link>
         </div>

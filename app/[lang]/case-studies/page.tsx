@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
@@ -52,7 +52,7 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ la
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{s.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed mb-4">{s.desc}</p>
-                <Link href={`/${lang}/contact`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
+                <Link href={`/contact`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:brightness-125 transition-all">
                   {t.readMore} <ArrowRight size={14} />
                 </Link>
               </div>
@@ -64,7 +64,7 @@ export default async function CaseStudiesPage({ params }: { params: Promise<{ la
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">{t.ctaTitle}</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">{t.ctaDesc}</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
             {t.ctaBtn} <ArrowRight size={16} />
           </Link>
         </div>

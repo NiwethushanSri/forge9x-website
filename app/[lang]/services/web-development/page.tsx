@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Globe, ShoppingCart, FileText, Layout, Code2, Search } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import TechMarquee from "@/components/TechMarquee";
@@ -29,7 +29,7 @@ export default async function WebDevelopmentPage({ params }: { params: Promise<{
               Going digital without a website? A big no-no! Your website is the core of your digital presence. With Forge9x's expert web development, your business can operate at full capacity.
             </p>
             <Link
-              href={`/${lang}/contact`}
+              href={`/contact`}
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110"
               style={{ backgroundColor: "#00679A" }}
             >
@@ -89,7 +89,7 @@ export default async function WebDevelopmentPage({ params }: { params: Promise<{
           <h2 className="text-3xl font-bold mb-4">Let Forge9x Build Your Perfect Website</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">Contact us today to discuss your web development needs and get a free quote.</p>
           <Link
-            href={`/${lang}/contact`}
+            href={`/contact`}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white transition-colors hover:bg-gray-100"
             style={{ color: "#00679A" }}
           >

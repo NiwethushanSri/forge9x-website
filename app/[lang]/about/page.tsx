@@ -90,10 +90,10 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
             We don&apos;t just deliver software. We co-create, advise, and innovate alongside our clients. We help them navigate complexity and grow with confidence.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               Work with us <ArrowRight size={16} />
             </Link>
-            <Link href={`/${lang}/careers`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border border-gray-600 text-white hover:border-white transition-colors">
+            <Link href={`/careers`} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold border border-gray-600 text-white hover:border-white transition-colors">
               Join our team
             </Link>
           </div>
@@ -178,7 +178,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
                   </div>
                 ))}
               </div>
-              <Link href={`/${lang}/services/web-development`} className="inline-flex items-center gap-2 mt-10 px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-gray-600 hover:border-white transition-colors">
+              <Link href={`/services/web-development`} className="inline-flex items-center gap-2 mt-10 px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-gray-600 hover:border-white transition-colors">
                 Our Services <ArrowRight size={14} />
               </Link>
             </div>
@@ -206,7 +206,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
               <p className="text-gray-400 leading-relaxed mb-8">
                 Every project is guided by the same culture of curiosity, collaboration, and craftsmanship. We deliver real impact for our clients while continuously growing as a company.
               </p>
-              <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-gray-600 hover:border-white transition-colors">
+              <Link href={`/contact`} className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-gray-600 hover:border-white transition-colors">
                 Get in touch <ArrowRight size={14} />
               </Link>
             </div>
@@ -232,7 +232,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
                   <div className="text-sm text-gray-400">With a 4.5-hour overlap between UK and Sri Lanka, our clients always have someone available. We never sacrifice speed or momentum.</div>
                 </div>
               </div>
-              <Link href={`/${lang}/team`} className="inline-flex items-center gap-2 mt-8 px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-gray-600 hover:border-white transition-colors">
+              <Link href={`/team`} className="inline-flex items-center gap-2 mt-8 px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-gray-600 hover:border-white transition-colors">
                 Meet our team <ArrowRight size={14} />
               </Link>
             </div>
@@ -291,7 +291,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-4xl font-black mb-4">Ready to work with Forge9x?</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto text-lg">Let us help you unlock the true potential of your business with technology that delivers.</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors text-lg" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors text-lg" style={{ color: "#00679A" }}>
             Contact Us Today <ArrowRight size={18} />
           </Link>
         </div>

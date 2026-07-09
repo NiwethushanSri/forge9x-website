@@ -36,7 +36,7 @@ export default async function GraphicDesignPage({ params }: { params: Promise<{ 
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               At Forge9x, graphic design is more than aesthetics   it's about crafting visual content that engages, communicates effectively, and delivers results. Every design is built around your business goals.
             </p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               Start Creating <ArrowRight size={16} />
             </Link>
           </div>
@@ -79,7 +79,7 @@ export default async function GraphicDesignPage({ params }: { params: Promise<{ 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>Let's Create Together!</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>Develop a strong visual identity that leaves a lasting impression and aligns with your brand's goals.</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gray-900 hover:bg-gray-800 transition-colors">
             Get in Touch <ArrowRight size={16} />
           </Link>
         </div>

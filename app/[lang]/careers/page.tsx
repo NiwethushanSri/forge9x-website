@@ -144,7 +144,7 @@ export default function CareersPage({ params }: { params: Promise<{ lang: Locale
                     <span className="flex items-center gap-1"><MapPin size={13} /> {job.location}</span>
                   </div>
                 </div>
-                <Link href={`/${lang}/contact`} className="shrink-0 inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-white text-sm hover:brightness-110 transition-all" style={{ backgroundColor: "#00679A" }}>
+                <Link href={`/contact`} className="shrink-0 inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-white text-sm hover:brightness-110 transition-all" style={{ backgroundColor: "#00679A" }}>
                   {t.applyNow} <ArrowRight size={14} />
                 </Link>
               </div>
@@ -181,7 +181,7 @@ export default function CareersPage({ params }: { params: Promise<{ lang: Locale
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>{t.ctaTitle}</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>{t.ctaDesc}</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">
             {t.getInTouch} <ArrowRight size={16} />
           </Link>
         </div>

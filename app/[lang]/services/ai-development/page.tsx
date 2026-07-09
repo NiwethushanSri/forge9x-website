@@ -26,7 +26,7 @@ export default async function AIDevelopmentPage({ params }: { params: Promise<{ 
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               At Forge9x, we deliver innovative AI development services that transform your business. By leveraging the power of artificial intelligence, we create custom solutions that improve efficiency, enhance customer interactions, and drive sustainable growth.
             </p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               Harness the Power of AI <ArrowRight size={16} />
             </Link>
           </div>
@@ -70,7 +70,7 @@ export default async function AIDevelopmentPage({ params }: { params: Promise<{ 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Let Forge9x Help You Harness the Power of AI</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">Contact us today to learn how AI can transform your business operations.</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
             Contact Us Today <ArrowRight size={16} />
           </Link>
         </div>

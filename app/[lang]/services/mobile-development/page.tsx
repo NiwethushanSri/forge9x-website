@@ -33,7 +33,7 @@ export default async function MobileDevelopmentPage({ params }: { params: Promis
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               We develop iOS and Android apps that retain potential customers and drive business growth. Secure code, powerful back-end systems, and exceptional UI   with ongoing support and maintenance.
             </p>
-            <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
+            <Link href={`/contact`} className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-white transition-all hover:brightness-110" style={{ backgroundColor: "#00679A" }}>
               Build Your App <ArrowRight size={16} />
             </Link>
           </div>
@@ -92,7 +92,7 @@ export default async function MobileDevelopmentPage({ params }: { params: Promis
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Let Forge9x Build the App That Transforms Your Business</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">Contact us today to discuss your mobile app project.</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-white hover:bg-gray-100 transition-colors" style={{ color: "#00679A" }}>
             Contact Us <ArrowRight size={16} />
           </Link>
         </div>

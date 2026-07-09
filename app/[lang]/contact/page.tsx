@@ -124,7 +124,7 @@ export default function ContactPage({ params }: { params: Promise<{ lang: Locale
                         <input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} className="mt-1 w-4 h-4 rounded border-gray-600 bg-gray-800 accent-blue-500 shrink-0" />
                         <span className="text-white text-sm">
                           {t.privacyConsent}{" "}
-                          <a href={`/${lang}/privacy`} className="underline hover:text-gray-300 transition-colors">{t.privacyLink}</a>.*
+                          <a href={`/privacy`} className="underline hover:text-gray-300 transition-colors">{t.privacyLink}</a>.*
                         </span>
                       </label>
                       <p className="text-gray-400 text-sm mt-3 leading-relaxed pl-7">

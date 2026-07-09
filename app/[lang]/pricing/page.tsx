@@ -66,7 +66,7 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
                     </li>
                   ))}
                 </ul>
-                <Link href={`/${lang}/contact`} className={`py-3 rounded-xl font-semibold text-center transition-colors ${plan.highlight ? "bg-white hover:bg-gray-100" : "text-white hover:brightness-110"}`} style={plan.highlight ? { color: "#00679A" } : { backgroundColor: "#00679A" }}>{plan.cta}</Link>
+                <Link href={`/contact`} className={`py-3 rounded-xl font-semibold text-center transition-colors ${plan.highlight ? "bg-white hover:bg-gray-100" : "text-white hover:brightness-110"}`} style={plan.highlight ? { color: "#00679A" } : { backgroundColor: "#00679A" }}>{plan.cta}</Link>
               </div>
             ))}
           </div>
@@ -95,7 +95,7 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4" style={{ color: "#111827" }}>{dict.pricing.customTitle}</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "#1f2937" }}>{dict.pricing.customDesc}</p>
-          <Link href={`/${lang}/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">{dict.pricing.customBtn} <ArrowRight size={16} /></Link>
+          <Link href={`/contact`} className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-[#0a0a0a] hover:bg-gray-800 transition-colors">{dict.pricing.customBtn} <ArrowRight size={16} /></Link>
         </div>
       </section>
     </>
