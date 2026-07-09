@@ -8,6 +8,7 @@ import type { Locale } from "@/middleware";
 import enDict from "@/dictionaries/en.json";
 
 const projects = [
+  { title: "Michaelites A/L 2015 Forum", category: "Web Applications", desc: "A community forum platform for the A/L 2015 batch of St. Michael's College, Batticaloa — connecting batchmates worldwide to celebrate achievements and give back to their alma mater.", tags: ["Community", "Forum", "React"], image: "/portfolio/michaelites.png", url: "https://michaelites2015.netlify.app" },
   { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], image: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
   { title: "Mangala Matrimony", category: "Mobile", desc: "A matrimonial matchmaking platform connecting Sri Lankan singles worldwide, with profile creation, matching, and secure account access.", tags: ["Matchmaking", "Mobile", "SaaS"], image: "/portfolio/managala.jpg", url: "https://mangala.love" },
   { title: "E-Commerce Platform", category: "Web Development", desc: "A fully custom WooCommerce store with advanced product filtering, custom checkout flow, and inventory management.", tags: ["WordPress", "WooCommerce", "PHP"], image: "/portfolio/ecommerce.jpg" },
@@ -18,7 +19,7 @@ const projects = [
   { title: "Logistics Management System", category: "Web Applications", desc: "End-to-end logistics platform covering inventory, order processing, shipping tracking, and returns management.", tags: ["Next.js", "TypeScript", "MySQL"], image: "/portfolio/logistics.jpg" },
   { title: "SEO Campaign Law Firm", category: "Web Development", desc: "A comprehensive SEO overhaul that improved organic traffic by 340% in 6 months through content strategy and link building.", tags: ["SEO", "Content", "Analytics"], image: "/portfolio/seo.jpg" },
   { title: "Healthcare Appointment System", category: "Web Applications", desc: "Cloud-based appointment booking system for a multi-clinic healthcare group with calendar sync and SMS reminders.", tags: ["React", "AWS", "Twilio"], image: "/portfolio/healthcare.jpg" },
-  { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"], image: "/portfolio/biometrics.jpg" },
+  { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"], image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&q=80" },
 ];
 
 const categories = ["All", "Web Development", "Web Applications", "AI", "Mobile", "Graphic Design"];

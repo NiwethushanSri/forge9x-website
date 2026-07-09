@@ -43,7 +43,7 @@ export default function Footer({
   dict: FooterDict;
   nav: NavDict;
 }) {
-  const l = "/";
+  const l = "";
   return (
     <footer className="bg-black text-gray-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

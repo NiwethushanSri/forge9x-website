@@ -35,5 +35,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|favicon.ico|favicon.svg|icons|portfolio|office-team.jpg|office-woman.jpg|ico-logo.png).*)"],
+  matcher: ["/((?!_next|api|favicon.ico|favicon.svg|icons|office-team.jpg|office-woman.jpg|ico-logo.png).*)"],
 };
