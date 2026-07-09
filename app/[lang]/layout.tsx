@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Forge9x — Digital Innovation Agency",
   description: "UK-based digital innovation agency specialising in web development, AI, mobile apps, and SEO.",
   verification: {
-    google: "jm2tqzHkJ2aXd4x",
+    google: "jm2tqzHkJ2aXd4xBz3bmeGPzVlm0DIxEWPxwfvnD41o",
   },
 };
 
