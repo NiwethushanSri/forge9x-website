@@ -8,7 +8,7 @@ import type { Locale } from "@/middleware";
 import enDict from "@/dictionaries/en.json";
 
 const projects = [
-  { title: "Michaelites A/L 2015 Forum", category: "Web Applications", desc: "A community forum platform for the A/L 2015 batch of St. Michael's College, Batticaloa — connecting batchmates worldwide to celebrate achievements and give back to their alma mater.", tags: ["Community", "Forum", "React"], image: "/portfolio/michaelites.png", url: "https://michaelites2015.netlify.app" },
+  { title: "Michaelites A/L 2015 Forum", category: "Web Applications", desc: "A community forum platform for the A/L 2015 batch of St. Michael's College, Batticaloa. Connecting batchmates worldwide to celebrate achievements and give back to their alma mater.", tags: ["Community", "Forum", "React"], image: "/portfolio/michaelites.png", url: "https://michaelites2015.netlify.app" },
   { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], image: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
   { title: "Mangala Matrimony", category: "Mobile", desc: "A matrimonial matchmaking platform connecting Sri Lankan singles worldwide, with profile creation, matching, and secure account access.", tags: ["Matchmaking", "Mobile", "SaaS"], image: "/portfolio/managala.jpg", url: "https://mangala.love" },
   { title: "E-Commerce Platform", category: "Web Development", desc: "A fully custom WooCommerce store with advanced product filtering, custom checkout flow, and inventory management.", tags: ["WordPress", "WooCommerce", "PHP"], image: "/portfolio/ecommerce.jpg" },

@@ -286,7 +286,59 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
       </section>
 
 
-{/* ── CTA ── */}
+{/* ── Leadership ── */}
+      <section className="bg-black border-t border-gray-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-gray-500 inline-block" /> Meet our leaders
+          </p>
+          <h2 className="text-4xl font-black text-white mb-12">Leadership team</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Leaders list */}
+            <div className="flex flex-col divide-y divide-gray-800">
+              {[
+                { name: "Sritharan Niwethushan", role: "Founder & CEO, Forge9X", image: "/team/niwethushan.jpg", linkedin: "https://www.linkedin.com/in/sritharan-niwethushan-558b2517b/" },
+                { name: "Gobinath Easwaranathan", role: "Co-Founder & CTO, Forge9X", image: "/team/gobinath.jpg", linkedin: "https://www.linkedin.com/in/nathnathanuk/" },
+              ].map((m) => (
+                <div key={m.name} className="flex items-center gap-6 py-8">
+                  <img src={m.image} alt={m.name} className="w-20 h-20 rounded-xl object-cover object-top shrink-0 grayscale" />
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-0.5">{m.name}</h3>
+                    <p className="text-gray-400 text-sm mb-3">{m.role}</p>
+                    <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#5EA8D9" }}>
+                      LinkedIn
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right side */}
+            <div className="flex flex-col gap-8 lg:pt-4">
+              <blockquote className="border-l-4 pl-6" style={{ borderColor: "#00679A" }}>
+                <p className="text-2xl font-bold text-white leading-snug mb-4">&ldquo;We started Forge9X with one belief: great technology should be accessible to every business, not just the ones with the biggest budgets.&rdquo;</p>
+                <cite className="text-sm text-gray-500 not-italic">Sritharan Niwethushan, Founder &amp; CEO</cite>
+              </blockquote>
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                {[
+                  { value: "6+", label: "Years Combined Experience" },
+                  { value: "2", label: "UK Universities" },
+                  { value: "UK", label: "Headquartered" },
+                  { value: "30+", label: "Team Members Worldwide" },
+                ].map((s) => (
+                  <div key={s.label} className="bg-[#0a0a0a] border border-gray-800 rounded-2xl p-5">
+                    <div className="text-3xl font-black text-white mb-1">{s.value}</div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
       <section className="py-20" style={{ backgroundColor: "#00679A" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-4xl font-black mb-4">Ready to work with Forge9x?</h2>

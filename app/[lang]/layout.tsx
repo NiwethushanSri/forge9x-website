@@ -26,7 +26,7 @@ export default async function LangLayout({
   return (
     <>
       <Navbar lang={lang} dict={dict.nav} />
-      <main className="pt-16 sm:pt-20 lg:pt-24">{children}</main>
+      <main className="pt-16 sm:pt-20 xl:pt-24">{children}</main>
       <Footer lang={lang} dict={dict.footer} nav={dict.nav} />
     </>
   );

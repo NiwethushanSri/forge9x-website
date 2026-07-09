@@ -60,7 +60,6 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
     { label: dict.home, href: "/" },
     { label: dict.portfolio, href: `/portfolio` },
     { label: dict.blog, href: `/blog` },
-    { label: dict.team, href: `/team` },
     { label: dict.contact, href: `/contact` },
     { label: dict.careers, href: `/careers` },
     { label: dict.about, href: `/about` },
@@ -71,16 +70,16 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+          <div className="flex items-center justify-between h-16 sm:h-20 xl:h-24">
 
             {/* Logo */}
-            <Link href={"/"} className="flex items-center gap-0.5 text-2xl sm:text-3xl lg:text-4xl font-black shrink-0 outline-none" onClick={() => setGridOpen(false)}>
+            <Link href={"/"} className="flex items-center gap-0.5 text-2xl sm:text-3xl xl:text-4xl font-black shrink-0 outline-none" onClick={() => setGridOpen(false)}>
               <span style={{ color: "#FFFFFF" }}>Forge</span>
               <span style={{ color: "#FFCC33" }}>9x</span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-9">
+            <nav className="hidden xl:flex items-center gap-9">
               {/* Services dropdown */}
               <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
                 <button className="flex items-center gap-1 text-lg font-semibold text-gray-200 hover:text-white transition-colors whitespace-nowrap outline-none">
@@ -122,17 +121,17 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
 
             {/* Right side */}
             <div className="flex items-center gap-3">
-              <Link href={`/contact`} className="hidden lg:inline-flex px-6 py-3 text-base font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap outline-none" style={{ backgroundColor: "#00679A" }}>
+              <Link href={`/contact`} className="hidden xl:inline-flex px-6 py-3 text-base font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap outline-none" style={{ backgroundColor: "#00679A" }}>
                 {dict.getInTouch}
               </Link>
 
-              {/* Mobile menu button */}
-              <button className="p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none lg:hidden" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
+              {/* Mobile/tablet menu button */}
+              <button className="p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none xl:hidden" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
                 {gridOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
 
               {/* Desktop menu toggle */}
-              <button className="hidden lg:block p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
+              <button className="hidden xl:block p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
                 {gridOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
             </div>

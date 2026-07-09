@@ -96,7 +96,6 @@ export default function Footer({
                 [nav.pricing, `${l}/pricing`],
                 [nav.blog, `${l}/blog`],
                 [nav.careers, `${l}/careers`],
-                [nav.team, `${l}/team`],
                 [nav.contact, `${l}/contact`],
               ].map(([label, href]) => (
                 <li key={href}><Link href={href} className="text-white text-base sm:text-lg font-normal hover:text-gray-300 transition-colors">{label}</Link></li>
