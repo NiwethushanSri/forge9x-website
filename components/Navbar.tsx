@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { X, ChevronDown, Menu } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
-import { useTransition } from "react";
 
 type NavDict = {
   services: string;
@@ -36,9 +34,6 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
   const [hubOpen, setHubOpen] = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
   const [mobileHub, setMobileHub] = useState(false);
-  const [, startTransition] = useTransition();
-  const pathname = usePathname();
-  const router = useRouter();
 
   const services = [
     { label: dict.servicesList.webDev, href: `/${lang}/services/web-development` },
@@ -71,17 +66,6 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
     { label: dict.about, href: `/${lang}/about` },
     { label: dict.pricing, href: `/${lang}/pricing` },
   ];
-
-  function switchLang(newLang: string) {
-    // Replace the current locale prefix in the path
-    const segments = pathname.split("/");
-    segments[1] = newLang;
-    const newPath = segments.join("/") || `/${newLang}`;
-    document.cookie = `NEXT_LOCALE=${newLang};path=/;max-age=31536000`;
-    startTransition(() => {
-      router.push(newPath);
-    });
-  }
 
   return (
     <>
@@ -138,35 +122,14 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
 
             {/* Right side */}
             <div className="flex items-center gap-3">
-              {/* Language switcher */}
-              <div className="hidden lg:flex items-center gap-1 border border-gray-700 rounded-lg overflow-hidden text-sm font-semibold">
-                <button
-                  onClick={() => switchLang("en")}
-                  className={`px-3 py-1.5 transition-colors ${lang === "en" ? "bg-white text-black" : "text-gray-400 hover:text-white"}`}
-                >
-                  EN
-                </button>
-                <button
-                  onClick={() => switchLang("cy")}
-                  className={`px-3 py-1.5 transition-colors ${lang === "cy" ? "bg-white text-black" : "text-gray-400 hover:text-white"}`}
-                >
-                  CY
-                </button>
-              </div>
-
               <Link href={`/${lang}/contact`} className="hidden lg:inline-flex px-6 py-3 text-base font-semibold text-white rounded-xl transition-all hover:brightness-110 whitespace-nowrap outline-none" style={{ backgroundColor: "#00679A" }}>
                 {dict.getInTouch}
               </Link>
 
-              {/* Mobile language + menu */}
-              <div className="flex items-center gap-2 lg:hidden">
-                <button onClick={() => switchLang(lang === "en" ? "cy" : "en")} className="px-2.5 py-1 text-xs font-bold text-white border border-gray-600 rounded-md hover:border-white transition-colors">
-                  {lang === "en" ? "CY" : "EN"}
-                </button>
-                <button className="p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
-                  {gridOpen ? <X size={26} /> : <Menu size={26} />}
-                </button>
-              </div>
+              {/* Mobile menu button */}
+              <button className="p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none lg:hidden" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
+                {gridOpen ? <X size={26} /> : <Menu size={26} />}
+              </button>
 
               {/* Desktop menu toggle */}
               <button className="hidden lg:block p-2 rounded-lg text-gray-200 hover:bg-gray-800 transition-colors outline-none" onClick={() => setGridOpen(!gridOpen)} aria-label="Toggle menu">
@@ -230,14 +193,10 @@ export default function Navbar({ lang, dict }: { lang: string; dict: NavDict }) 
           ))}
         </nav>
 
-        <div className="px-8 py-6 border-t border-gray-800 flex items-center justify-between">
+        <div className="px-8 py-6 border-t border-gray-800">
           <Link href={`/${lang}/contact`} onClick={() => setGridOpen(false)} className="px-6 py-2.5 rounded-xl font-semibold text-white text-sm transition-all hover:brightness-110 inline-block" style={{ backgroundColor: "#00679A" }}>
             {dict.getInTouch}
           </Link>
-          <div className="flex items-center gap-1 border border-gray-700 rounded-lg overflow-hidden text-sm font-semibold">
-            <button onClick={() => switchLang("en")} className={`px-3 py-1.5 transition-colors ${lang === "en" ? "bg-white text-black" : "text-gray-400 hover:text-white"}`}>EN</button>
-            <button onClick={() => switchLang("cy")} className={`px-3 py-1.5 transition-colors ${lang === "cy" ? "bg-white text-black" : "text-gray-400 hover:text-white"}`}>CY</button>
-          </div>
         </div>
       </div>
     </>

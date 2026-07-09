@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Search, Target, TrendingUp, FileText, Layout, Link2 } from "lucide-react";
 
 const seoServices = [
@@ -11,7 +11,7 @@ const seoServices = [
 ];
 
 export default async function SEOPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params; {
+  const { lang } = await params;
   return (
     <>
       <section className="bg-black text-white border-t border-gray-800 py-24">

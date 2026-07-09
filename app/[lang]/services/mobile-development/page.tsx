@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Smartphone, Globe2, Building2, Star } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 
@@ -20,7 +20,7 @@ const process = [
 ];
 
 export default async function MobileDevelopmentPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params; {
+  const { lang } = await params;
   return (
     <>
       <section className="bg-black text-white border-t border-gray-800 py-24">

@@ -54,9 +54,9 @@ const services = [
 ];
 
 const stats = [
-  { icon: <Users size={24} />, value: "200+", label: "Clients Served" },
+  { icon: <Users size={24} />, value: "100+", label: "Clients Served" },
   { icon: <Award size={24} />, value: "5+", label: "Years Experience" },
-  { icon: <CheckCircle size={24} />, value: "500+", label: "Projects Delivered" },
+  { icon: <CheckCircle size={24} />, value: "120+", label: "Projects Delivered" },
   { icon: <Star size={24} />, value: "98%", label: "Client Satisfaction" },
 ];
 

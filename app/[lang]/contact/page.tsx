@@ -5,15 +5,13 @@ import { Phone, Clock, Send, Paperclip } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
 import type { Locale } from "@/middleware";
 import enDict from "@/dictionaries/en.json";
-import cyDict from "@/dictionaries/cy.json";
 
 const times = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
 
 export default function ContactPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = use(params);
-  const dict = lang === "cy" ? cyDict : enDict;
+  const dict = enDict;
   const t = dict.contact;
-  const isCy = lang === "cy";
 
   const [form, setForm] = useState({ name: "", email: "", phone: "", country: "United Kingdom", date: "", time: "09:00", message: "" });
   const [sent, setSent] = useState(false);
@@ -45,8 +43,8 @@ export default function ContactPage({ params }: { params: Promise<{ lang: Locale
             <div className="flex flex-col gap-6">
               <h2 className="text-xl font-bold text-white">{t.infoTitle}</h2>
               {[
-                { icon: <Phone size={18} />, label: isCy ? "Swyddfa'r DU" : "UK Office", lines: ["+44 7466 008727", "hello@forge9x.co.uk"] },
-                { icon: <Phone size={18} />, label: isCy ? "Swyddfa Sri Lanka" : "Sri Lanka Office", lines: ["+94 777 233 179", "info@forge9x.co.uk"] },
+                { icon: <Phone size={18} />, label: "UK Office", lines: ["+44 7466 008727", "hello@forge9x.co.uk"] },
+                { icon: <Phone size={18} />, label: "Sri Lanka Office", lines: ["+94 777 233 179", "info@forge9x.co.uk"] },
                 { icon: <Clock size={18} />, label: t.hoursTitle, lines: [t.hoursValue] },
               ].map((item) => (
                 <div key={item.label} className="bg-[#0a0a0a] rounded-2xl p-6 border border-gray-900">
@@ -88,24 +86,24 @@ export default function ContactPage({ params }: { params: Promise<{ lang: Locale
                       <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder={t.phonePlaceholder} className="w-full px-4 py-2.5 rounded-xl border border-gray-700 text-sm focus:outline-none focus:border-blue-500 bg-gray-800 text-white placeholder-gray-500" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">{isCy ? "Gwlad" : "Country"}</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Country</label>
                       <select value={form.country} onChange={(e) => setForm({ ...form, country: e.target.value })} className="w-full px-4 py-2.5 rounded-xl border border-gray-700 text-sm focus:outline-none focus:border-blue-500 bg-gray-800 text-white">
-                        <option>{isCy ? "Deyrnas Unedig" : "United Kingdom"}</option>
+                        <option>United Kingdom</option>
                         <option>Sri Lanka</option>
-                        <option>{isCy ? "Unol Daleithiau" : "United States"}</option>
-                        <option>{isCy ? "Awstralia" : "Australia"}</option>
+                        <option>United States</option>
+                        <option>Australia</option>
                         <option>Canada</option>
-                        <option>{isCy ? "Arall" : "Other"}</option>
+                        <option>Other</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">{isCy ? "Dewis Dyddiad ar gyfer Galwad" : "Select Date for a Call"}</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Select Date for a Call</label>
                       <input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} className="w-full px-4 py-2.5 rounded-xl border border-gray-700 text-sm focus:outline-none focus:border-blue-500 bg-gray-800 text-white" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-1.5">{isCy ? "Amser Addas" : "Suitable Time"}</label>
+                      <label className="block text-sm font-medium text-gray-300 mb-1.5">Suitable Time</label>
                       <select value={form.time} onChange={(e) => setForm({ ...form, time: e.target.value })} className="w-full px-4 py-2.5 rounded-xl border border-gray-700 text-sm focus:outline-none focus:border-blue-500 bg-gray-800 text-white">
-                        {times.map((tm) => <option key={tm}>{tm} {isCy ? "Oriau" : "Hours"}</option>)}
+                        {times.map((tm) => <option key={tm}>{tm} Hours</option>)}
                       </select>
                     </div>
                     <div className="md:col-span-2">
@@ -115,9 +113,9 @@ export default function ContactPage({ params }: { params: Promise<{ lang: Locale
                     <div className="md:col-span-2">
                       <label className="flex items-center gap-3 cursor-pointer w-fit">
                         <span className="px-5 py-2 rounded-full bg-gray-700 text-white text-sm font-medium hover:bg-gray-600 transition-colors flex items-center gap-2">
-                          <Paperclip size={14} /> {isCy ? "Dewiswch eich ffeil" : "Choose your file"}
+                          <Paperclip size={14} /> Choose your file
                         </span>
-                        <span className="text-gray-400 text-sm">{fileName || (isCy ? "Gallwch ei ollwng yma..." : "Yes, you can just drop it here...")}</span>
+                        <span className="text-gray-400 text-sm">{fileName || "Yes, you can just drop it here..."}</span>
                         <input type="file" className="hidden" onChange={(e) => setFileName(e.target.files?.[0]?.name || "")} />
                       </label>
                     </div>
@@ -130,7 +128,7 @@ export default function ContactPage({ params }: { params: Promise<{ lang: Locale
                         </span>
                       </label>
                       <p className="text-gray-400 text-sm mt-3 leading-relaxed pl-7">
-                        {isCy ? "Mae Forge9x yn ymroddedig i ddiogelu eich preifatrwydd. Byddwn yn defnyddio'r wybodaeth a ddarparwch i ymateb i'ch ymholiad." : "Forge9x is committed to protecting your privacy. We will use the information you provide to respond to your inquiry."}
+                        Forge9x is committed to protecting your privacy. We will use the information you provide to respond to your inquiry.
                       </p>
                     </div>
                     <div className="md:col-span-2 overflow-x-auto">

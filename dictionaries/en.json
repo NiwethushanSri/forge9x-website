@@ -80,9 +80,9 @@
       }
     ],
     "stats": [
-      { "value": "200+", "label": "Clients Served" },
+      { "value": "100+", "label": "Clients Served" },
       { "value": "5+", "label": "Years Experience" },
-      { "value": "500+", "label": "Projects Delivered" },
+      { "value": "120+", "label": "Projects Delivered" },
       { "value": "98%", "label": "Client Satisfaction" }
     ]
   },
@@ -93,9 +93,9 @@
     "desc2": "From our roots in the UK to our talented team in Sri Lanka, we bring together diverse perspectives and deep technical expertise to deliver solutions that genuinely move the needle for our clients.",
     "learnMore": "Our Story",
     "stats": [
-      { "value": "200+", "label": "Clients Served" },
+      { "value": "100+", "label": "Clients Served" },
       { "value": "5+", "label": "Years Experience" },
-      { "value": "500+", "label": "Projects Delivered" },
+      { "value": "120+", "label": "Projects Delivered" },
       { "value": "98%", "label": "Client Satisfaction" }
     ],
     "valuesTitle": "Our Values",
@@ -230,7 +230,7 @@
     ]
   },
   "portfolio": {
-    "title": "Case Studies",
+    "title": "Portfolio",
     "desc": "Boost your digital potential. Real projects, real results see how Forge9x helps businesses turn bold ideas into powerful digital products.",
     "filterLabel": "Filter by Category",
     "readMore": "Read More",

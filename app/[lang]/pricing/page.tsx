@@ -6,36 +6,35 @@ import type { Locale } from "@/middleware";
 export default async function PricingPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
-  const isCy = lang === "cy";
 
   const plans = [
     {
       name: "Starter", price: "£299",
-      period: isCy ? "untro" : "one-off",
-      desc: isCy ? "Perffaith ar gyfer busnesau bach a chwmnïau newydd sydd angen presenoldeb digidol cryf." : "Perfect for small businesses and startups needing a strong digital presence.",
-      features: isCy ? ["Hyd at 5 tudalen", "Dyluniad ymatebol", "Gosodiad SEO sylfaenol", "Ffurflen gyswllt", "1 mis o gymorth", "Integreiddio CMS (WordPress)"] : ["Up to 5 pages", "Responsive design", "Basic SEO setup", "Contact form", "1 month support", "CMS integration (WordPress)"],
-      cta: isCy ? "Cychwyn Arni" : "Get Started", highlight: false,
+      period: "one-off",
+      desc: "Perfect for small businesses and startups needing a strong digital presence.",
+      features: ["Up to 5 pages", "Responsive design", "Basic SEO setup", "Contact form", "1 month support", "CMS integration (WordPress)"],
+      cta: "Get Started", highlight: false,
     },
     {
       name: "Growth", price: "£599",
-      period: isCy ? "untro" : "one-off",
-      desc: isCy ? "Ar gyfer busnesau sy'n tyfu sydd angen gwefan gyfoethog mewn nodweddion ac offer marchnata." : "For growing businesses that need a feature-rich website and marketing tools.",
-      features: isCy ? ["Hyd at 15 tudalen", "Dyluniad pwrpasol", "Optimeiddio SEO llawn", "E-fasnach (hyd at 100 cynnyrch)", "3 mis o gymorth", "Blog a CMS", "Integreiddio Google Analytics", "Integreiddio cyfryngau cymdeithasol"] : ["Up to 15 pages", "Custom design", "Full SEO optimisation", "E-commerce (up to 100 products)", "3 months support", "Blog & CMS", "Google Analytics integration", "Social media integration"],
-      cta: isCy ? "Cychwyn Arni" : "Get Started", highlight: true,
+      period: "one-off",
+      desc: "For growing businesses that need a feature-rich website and marketing tools.",
+      features: ["Up to 15 pages", "Custom design", "Full SEO optimisation", "E-commerce (up to 100 products)", "3 months support", "Blog & CMS", "Google Analytics integration", "Social media integration"],
+      cta: "Get Started", highlight: true,
     },
     {
-      name: "Enterprise", price: isCy ? "Pwrpasol" : "Custom",
-      period: isCy ? "dyfynbris" : "quote",
-      desc: isCy ? "Datrysiadau wedi'u teilwra ar gyfer busnesau mawr, rhaglenni gwe, AI a gofynion cymhleth." : "Tailored solutions for large businesses, web apps, AI, and complex requirements.",
-      features: isCy ? ["Tudalennau di-ben-draw", "Rhaglen we bwrpasol", "Integreiddio AI ac ML", "Datblygu ERP/CRM", "Datblygu ap symudol", "Rheolwr prosiect pwrpasol", "12 mis o gymorth", "Ymateb blaenoriaeth"] : ["Unlimited pages", "Custom web application", "AI & ML integration", "ERP/CRM development", "Mobile app development", "Dedicated project manager", "12 months support", "Priority response"],
-      cta: isCy ? "Cysylltu â Ni" : "Contact Us", highlight: false,
+      name: "Enterprise", price: "Custom",
+      period: "quote",
+      desc: "Tailored solutions for large businesses, web apps, AI, and complex requirements.",
+      features: ["Unlimited pages", "Custom web application", "AI & ML integration", "ERP/CRM development", "Mobile app development", "Dedicated project manager", "12 months support", "Priority response"],
+      cta: "Contact Us", highlight: false,
     },
   ];
 
   const maintenance = [
-    { name: "Basic", price: "£49/mo", features: isCy ? ["Copïau wrth gefn misol", "Diweddariadau diogelwch", "Monitro amser rhedeg"] : ["Monthly backups", "Security updates", "Uptime monitoring"] },
-    { name: "Standard", price: "£99/mo", features: isCy ? ["Copïau wrth gefn wythnosol", "Diweddariadau diogelwch", "Optimeiddio perfformiad", "Diweddariadau cynnwys (2awr/mis)"] : ["Weekly backups", "Security updates", "Performance optimisation", "Content updates (2hrs/mo)"] },
-    { name: "Premium", price: "£199/mo", features: isCy ? ["Copïau wrth gefn dyddiol", "Cymorth blaenoriaeth", "Diweddariadau cynnwys di-ben-draw", "Adroddiad SEO misol", "Optimeiddio perfformiad"] : ["Daily backups", "Priority support", "Unlimited content updates", "Monthly SEO report", "Performance optimisation"] },
+    { name: "Basic", price: "£49/mo", features: ["Monthly backups", "Security updates", "Uptime monitoring"] },
+    { name: "Standard", price: "£99/mo", features: ["Weekly backups", "Security updates", "Performance optimisation", "Content updates (2hrs/mo)"] },
+    { name: "Premium", price: "£199/mo", features: ["Daily backups", "Priority support", "Unlimited content updates", "Monthly SEO report", "Performance optimisation"] },
   ];
 
   return (
@@ -49,7 +48,7 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
       <section className="bg-black border-t border-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-white mb-4">{isCy ? "Pecynnau Datblygu Gwefannau" : "Website Development Packages"}</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Website Development Packages</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan) => (
@@ -76,8 +75,8 @@ export default async function PricingPage({ params }: { params: Promise<{ lang: 
       <section className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">{isCy ? "Cynlluniau Cynnal a Chadw Gwefannau" : "Website Maintenance Plans"}</h2>
-            <p className="text-gray-400 max-w-xl mx-auto">{isCy ? "Cadwch eich gwefan yn ddiogel, cyflym, a chyfredol." : "Keep your website secure, fast, and up-to-date."}</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Website Maintenance Plans</h2>
+            <p className="text-gray-400 max-w-xl mx-auto">Keep your website secure, fast, and up-to-date.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {maintenance.map((m) => (

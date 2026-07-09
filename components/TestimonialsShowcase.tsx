@@ -20,7 +20,7 @@ const testimonials = [
     country: "🇬🇧 UK",
     avatar: "OT",
     color: "#059669",
-    review: "We approached Forge9x for a complete digital overhaul — website, mobile app, and CRM system. They delivered all three on time and on budget. Exceptional quality and professionalism throughout.",
+    review: "We approached Forge9x for a complete digital overhaul. Website, mobile app, and CRM system. They delivered all three on time and on budget. Exceptional quality and professionalism throughout.",
   },
   {
     name: "Arjun Murugesan",
@@ -104,7 +104,7 @@ export default function TestimonialsShowcase() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-          {/* Left — clickable list */}
+          {/* Left - clickable list */}
           <div className="flex flex-col flex-1 divide-y divide-gray-800">
             {visible.map((item, i) => (
               <button
@@ -141,7 +141,7 @@ export default function TestimonialsShowcase() {
             </div>
           </div>
 
-          {/* Right — review display */}
+          {/* Right - review display */}
           <div className="lg:w-[55%] shrink-0 w-full">
             <div className="bg-[#0a0a0a] border border-gray-800 rounded-2xl p-6 sm:p-10 min-h-[280px] sm:min-h-[360px] flex flex-col justify-between transition-all duration-300">
               <div>

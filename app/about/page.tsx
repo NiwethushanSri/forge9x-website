@@ -50,7 +50,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right — image */}
+            {/* Right - image */}
             <div className="lg:w-[52%] shrink-0 w-full">
               <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: "16/10" }}>
                 <Image
@@ -74,9 +74,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "200+", label: "Clients Served" },
+              { value: "100+", label: "Clients Served" },
               { value: "5+",   label: "Years Experience" },
-              { value: "500+", label: "Projects Delivered" },
+              { value: "120+", label: "Projects Delivered" },
               { value: "98%",  label: "Client Satisfaction" },
             ].map((s) => (
               <div key={s.label}>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 Our standout quality, expert team, transparent processes, and cutting-edge technology have made us a trusted partner for driving growth. We are dedicated to helping businesses gain leads, convert them into sales, and achieve new heights with innovative, reliable solutions.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                We don't just provide software solutions — we build lasting partnerships that fuel your success. Trust us to elevate your tech game with tailored, results-driven innovations that help your business thrive in an ever-changing digital landscape.
+                We don't just provide software solutions. We build lasting partnerships that fuel your success. Trust us to elevate your tech game with tailored, results-driven innovations that help your business thrive in an ever-changing digital landscape.
               </p>
             </div>
             <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-5">

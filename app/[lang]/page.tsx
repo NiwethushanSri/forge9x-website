@@ -34,7 +34,7 @@ const statsIcons = [
   <CheckCircle size={32} key="check" />,
   <Star size={32} key="star" />,
 ];
-const statsValues = [200, 5, 500, 98];
+const statsValues = [100, 5, 120, 98];
 const statsSuffixes = ["+", "+", "+", "%"];
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {

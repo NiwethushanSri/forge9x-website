@@ -14,7 +14,7 @@ const services = [
 
 
 export default async function WebDevelopmentPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params; {
+  const { lang } = await params;
   return (
     <>
       {/* Hero */}

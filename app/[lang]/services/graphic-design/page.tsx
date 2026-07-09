@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Palette, BookOpen, Package, Video, FileImage } from "lucide-react";
 
 const designAreas = [
@@ -23,7 +23,7 @@ const deliverables = [
 ];
 
 export default async function GraphicDesignPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params; {
+  const { lang } = await params;
   return (
     <>
       <section className="bg-black text-white border-t border-gray-800 py-24">

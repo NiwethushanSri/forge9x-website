@@ -48,7 +48,7 @@ export default function TeamPage() {
               Meet Our Team
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed">
-              The passionate technologists, strategists, and innovators behind Forge9X — building the future, one solution at a time.
+              The passionate technologists, strategists, and innovators behind Forge9X. Building the future, one solution at a time.
             </p>
           </div>
         </div>

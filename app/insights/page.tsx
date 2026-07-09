@@ -68,7 +68,7 @@ const insights = [
     tag: "Web Development",
     date: "March 2026",
     title: "How to Choose the Right Tech Stack for Your Project in 2026",
-    excerpt: "React, Next.js, Node, Laravel — the options are overwhelming. We explain how we help clients make smart technology choices that reduce long-term cost and complexity.",
+    excerpt: "React, Next.js, Node, Laravel. The options are overwhelming. We explain how we help clients make smart technology choices that reduce long-term cost and complexity.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
     color: "#E76F51",
     readTime: "8 min read",
@@ -103,14 +103,14 @@ export default function InsightsPage() {
           <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Knowledge Hub</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">Insights</h1>
           <p className="text-gray-400 text-lg max-w-xl">
-            Practical thinking on web development, AI, design, and digital strategy — from the team at Forge9x.
+            Practical thinking on web development, AI, design, and digital strategy. From the team at Forge9x.
           </p>
         </div>
       </section>
 
       <section className="bg-black pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Featured — first article large */}
+          {/* Featured - first article large */}
           <Link href={`/insights/${insights[0].slug}`} className="group flex flex-col md:flex-row gap-10 mb-16 pb-16 border-b border-gray-800">
             <div className="md:w-1/2 relative rounded-2xl aspect-video overflow-hidden shrink-0 bg-gray-900">
               <Image
@@ -137,7 +137,7 @@ export default function InsightsPage() {
             </div>
           </Link>
 
-          {/* Grid — remaining articles */}
+          {/* Grid - remaining articles */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {insights.slice(1).map((article) => (
               <Link key={article.slug} href={`/insights/${article.slug}`} className="group flex flex-col">

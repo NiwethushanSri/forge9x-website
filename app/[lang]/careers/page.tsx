@@ -6,7 +6,6 @@ import { ArrowRight, MapPin, Briefcase, ChevronLeft, ChevronRight } from "lucide
 import { useState, use } from "react";
 import type { Locale } from "@/middleware";
 import enDict from "@/dictionaries/en.json";
-import cyDict from "@/dictionaries/cy.json";
 
 const lifeImages = [
   "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&q=80",
@@ -26,7 +25,7 @@ const officeColors = ["#8AB17D", "#B39DDB", "#E9C46A", "#E76F51"];
 
 export default function CareersPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = use(params);
-  const dict = lang === "cy" ? cyDict : enDict;
+  const dict = enDict;
   const t = dict.careers;
 
   const [slideIndex, setSlideIndex] = useState(0);

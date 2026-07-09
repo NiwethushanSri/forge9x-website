@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../globals.css";
+import "../../app/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import ThemeProvider from "@/components/ThemeProvider";
-import CookieBanner from "@/components/CookieBanner";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/middleware";
-import { locales } from "@/middleware";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
+  return [{ lang: "en" }];
 }
 
 export async function generateMetadata({
@@ -25,17 +17,15 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: Locale }>;
 }): Promise<Metadata> {
-  const { lang } = await params;
-  const isCy = lang === "cy";
   return {
-    title: isCy
-      ? "Forge9x | Datblygu Gwefannau, AI a Datrysiadau Digidol"
-      : "Forge9x | Web Development, AI & Digital Solutions",
-    description: isCy
-      ? "Mae Forge9x yn arbenigo mewn datblygu gwefannau pwrpasol, datrysiadau AI, apiau symudol, SEO a dylunio graffig."
-      : "Forge9x specialises in custom web development, AI solutions, mobile apps, SEO, and graphic design.",
-    viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-    icons: { icon: "/favicon.svg" },
+    title: "Forge9x — Digital Innovation Agency",
+    description: "UK-based digital innovation agency specialising in web development, AI, mobile apps, and SEO.",
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon.svg", type: "image/svg+xml" },
+      ],
+    },
   };
 }
 
@@ -50,15 +40,11 @@ export default async function LangLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} className={`${inter.variable} h-full`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col antialiased">
-        <ThemeProvider>
-          <Navbar lang={lang} dict={dict.nav} />
-          <main className="flex-1 pt-16 sm:pt-20 lg:pt-24 min-w-0">{children}</main>
-          <Footer lang={lang} dict={dict.footer} nav={dict.nav} />
-          <WhatsAppButton />
-          <CookieBanner />
-        </ThemeProvider>
+    <html lang={lang} className={inter.className}>
+      <body className="bg-black text-white">
+        <Navbar lang={lang} dict={dict.nav} />
+        <main className="pt-16 sm:pt-20 lg:pt-24">{children}</main>
+        <Footer lang={lang} dict={dict.footer} nav={dict.nav} />
       </body>
     </html>
   );

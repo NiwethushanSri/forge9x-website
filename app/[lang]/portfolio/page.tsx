@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
 import type { Locale } from "@/middleware";
 import enDict from "@/dictionaries/en.json";
-import cyDict from "@/dictionaries/cy.json";
 
 const projects = [
   { title: "Empliora", category: "Web Applications", desc: "A UK HR and compliance platform with Right to Work checks, visa and sponsor-licence tracking, staff records, and audit-ready reporting for employers.", tags: ["HR Tech", "Compliance", "SaaS"], image: "/portfolio/empliora.jpg", url: "https://empliora.co.uk" },
@@ -22,31 +21,17 @@ const projects = [
   { title: "Facial Biometrics Access Control", category: "AI", desc: "Secure facial recognition system for access control in corporate offices, deployed across multiple locations.", tags: ["Python", "ML", "OpenCV"], image: "/portfolio/biometrics.jpg" },
 ];
 
-const enCategories = ["All", "Web Development", "Web Applications", "AI", "Mobile", "Graphic Design"];
-const cyCategories = ["Pob Un", "Datblygu Gwefannau", "Rhaglenni Gwe", "AI", "Symudol", "Dylunio Graffig"];
-const categoryMap: Record<string, string> = {
-  "Pob Un": "All",
-  "Datblygu Gwefannau": "Web Development",
-  "Rhaglenni Gwe": "Web Applications",
-  "Symudol": "Mobile",
-  "Dylunio Graffig": "Graphic Design",
-  "AI": "AI",
-};
+const categories = ["All", "Web Development", "Web Applications", "AI", "Mobile", "Graphic Design"];
 
 export default function PortfolioPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = use(params);
-  const dict = lang === "cy" ? cyDict : enDict;
-  const t = dict.portfolio;
-  const isCy = lang === "cy";
+  const t = enDict.portfolio;
 
-  const categories = isCy ? cyCategories : enCategories;
-  const [activeCategory, setActiveCategory] = useState(categories[0]);
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const getEnglishCat = (cat: string) => isCy ? (categoryMap[cat] ?? cat) : cat;
-
-  const filteredProjects = getEnglishCat(activeCategory) === "All"
+  const filteredProjects = activeCategory === "All"
     ? projects
-    : projects.filter((p) => p.category === getEnglishCat(activeCategory));
+    : projects.filter((p) => p.category === activeCategory);
 
   return (
     <>

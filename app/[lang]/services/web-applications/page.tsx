@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, BarChart2, Users, UserCheck, CalendarCheck, Truck, Calendar } from "lucide-react";
 
 const apps = [
@@ -11,7 +11,7 @@ const apps = [
 ];
 
 export default async function WebApplicationsPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params; {
+  const { lang } = await params;
   return (
     <>
       <section className="bg-black text-white border-t border-gray-800 py-24">

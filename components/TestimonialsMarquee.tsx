@@ -91,7 +91,7 @@ const testimonials = [
     avatar: "OT",
     color: "#059669",
     review:
-      "We approached Forge9x for a complete digital overhaul — website, mobile app, and CRM system. They delivered all three on time and on budget. Exceptional quality and professionalism throughout.",
+      "We approached Forge9x for a complete digital overhaul. Website, mobile app, and CRM system. They delivered all three on time and on budget. Exceptional quality and professionalism throughout.",
   },
 ];
 

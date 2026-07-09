@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Brain, Bot, BarChart3, Cpu, Eye, MessageSquare, ScanFace } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 
@@ -13,7 +13,7 @@ const aiServices = [
 ];
 
 export default async function AIDevelopmentPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang } = await params; {
+  const { lang } = await params;
   return (
     <>
       <section className="bg-black text-white border-t border-gray-800 py-24">
