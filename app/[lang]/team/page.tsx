@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "@/middleware";
 import TeamPhoto from "@/components/TeamPhoto";
+
+export const metadata: Metadata = seo({
+  title: "Our Team — Meet the Founders",
+  description: "Meet the Forge9x leadership team. Founded by Niwethushan Sritharan (CEO) and Gobinath Easwaranathan (CTO), UK-based software engineers and entrepreneurs.",
+  path: "/team",
+});
 
 const expertiseNiwe = [
   "Artificial Intelligence (AI)",

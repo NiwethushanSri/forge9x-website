@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Globe, ShoppingCart, FileText, Layout, Code2, Search } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
+
+export const metadata: Metadata = seo({
+  title: "Web Development Services — Custom Websites UK",
+  description: "Professional web development services by Forge9x. We build fast, modern, SEO-optimised websites for businesses in the UK and worldwide.",
+  path: "/services/web-development",
+});
 import TechMarquee from "@/components/TechMarquee";
 
 const services = [

@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Smartphone, Globe2, Building2, Star } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
+
+export const metadata: Metadata = seo({
+  title: "Mobile App Development — iOS & Android Apps UK",
+  description: "Forge9x builds cross-platform iOS and Android mobile applications for startups and businesses. React Native and native development experts based in the UK.",
+  path: "/services/mobile-development",
+});
 
 const mobileServices = [
   { icon: <Smartphone size={24} />, color: "#E76F51", title: "Native Application Development", desc: "Seamless, intuitive apps optimised specifically for their platform. Native apps leverage full access to device features GPS, cameras, push notifications offering faster performance and better security." },

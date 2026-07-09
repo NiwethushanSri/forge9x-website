@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
+
+export const metadata: Metadata = seo({
+  title: "Web Development, AI & Digital Solutions",
+  description: "Forge9x is a UK-based digital agency delivering web development, AI solutions, mobile apps, and SEO for startups and businesses worldwide.",
+  path: "/",
+});
 import {
   Globe, Code2, Brain, Smartphone, Search, Palette,
   CheckCircle, ArrowRight, Star, Users, Award

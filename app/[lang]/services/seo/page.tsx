@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Search, Target, TrendingUp, FileText, Layout, Link2 } from "lucide-react";
+
+export const metadata: Metadata = seo({
+  title: "SEO Services — Search Engine Optimisation UK",
+  description: "Boost your Google rankings with Forge9x's SEO services. Technical SEO, content strategy, and link building for UK and international businesses.",
+  path: "/services/seo",
+});
 
 const seoServices = [
   { icon: <Target size={24} />, color: "#E76F51", title: "Competitor Analysis", desc: "We identify your industry rivals and examine their marketing strategies, comparing and assessing your business's strengths and areas for improvement to help you stay ahead in the market." },

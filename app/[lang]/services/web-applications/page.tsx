@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, BarChart2, Users, UserCheck, CalendarCheck, Truck, Calendar } from "lucide-react";
+
+export const metadata: Metadata = seo({
+  title: "Web Application Development — Custom SaaS & Portals",
+  description: "Forge9x builds powerful web applications, SaaS platforms, CRMs and business portals. Custom solutions for UK and international businesses.",
+  path: "/services/web-applications",
+});
 
 const apps = [
   { icon: <BarChart2 size={24} />, color: "#E76F51", title: "Enterprise Resource Planning (ERP)", desc: "Streamline your enterprise's routine operations from planning and budgeting to forecasting and reporting. Our ERP systems integrate seamlessly with your business for comprehensive operational efficiency." },

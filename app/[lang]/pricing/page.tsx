@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
+
+export const metadata: Metadata = seo({
+  title: "Pricing — Transparent Web & App Development Costs",
+  description: "View Forge9x's transparent pricing for web development, mobile apps, AI solutions, and SEO services. Flexible packages for startups and enterprises.",
+  path: "/pricing",
+});
 import type { Locale } from "@/middleware";
 
 export default async function PricingPage({ params }: { params: Promise<{ lang: Locale }> }) {

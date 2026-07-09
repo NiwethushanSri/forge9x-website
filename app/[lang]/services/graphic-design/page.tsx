@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Palette, BookOpen, Package, Video, FileImage } from "lucide-react";
+
+export const metadata: Metadata = seo({
+  title: "Graphic Design Services — Branding & Visual Identity",
+  description: "Forge9x creates stunning brand identities, logos, and marketing materials. Professional graphic design services for businesses in the UK and worldwide.",
+  path: "/services/graphic-design",
+});
 
 const designAreas = [
   { icon: <Palette size={24} />, color: "#E76F51", title: "Visual Identity & Branding", desc: "Logo design, brand guidelines, and consistent visual identity across all platforms." },

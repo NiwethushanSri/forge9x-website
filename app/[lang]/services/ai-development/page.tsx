@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Brain, Bot, BarChart3, Cpu, Eye, MessageSquare, ScanFace } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
+
+export const metadata: Metadata = seo({
+  title: "AI Development Services — Machine Learning & Automation",
+  description: "Forge9x delivers AI and machine learning solutions including chatbots, predictive analytics, automation and computer vision for businesses in the UK and globally.",
+  path: "/services/ai-development",
+});
 
 const aiServices = [
   { icon: <Brain size={24} />, color: "#E76F51", title: "Custom AI Applications", desc: "Tailor-made AI applications designed to meet your specific business needs AI-powered chatbots, predictive analytics, or machine learning models with cutting-edge expertise." },
