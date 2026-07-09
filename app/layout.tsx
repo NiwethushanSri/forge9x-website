@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-black text-white">
         <LocalBusinessSchema />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
