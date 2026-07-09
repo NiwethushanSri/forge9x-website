@@ -1,0 +1,308 @@
+{
+  "nav": {
+    "services": "Services",
+    "knowledgeHub": "Knowledge Hub",
+    "caseStudies": "Case Studies",
+    "insights": "Insights",
+    "portfolio": "Portfolio",
+    "careers": "Careers",
+    "about": "About",
+    "pricing": "Pricing",
+    "home": "Home",
+    "blog": "Blog",
+    "team": "Team",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch",
+    "servicesList": {
+      "webDev": "Web Development",
+      "webApps": "Web Applications",
+      "ai": "AI Development",
+      "mobile": "Mobile Development",
+      "seo": "SEO",
+      "graphic": "Graphic Design"
+    }
+  },
+  "footer": {
+    "services": "Services",
+    "company": "Company",
+    "stayUpdated": "Stay Updated",
+    "stayUpdatedDesc": "Get the latest insights on web development, AI, and digital growth.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "refund": "Refund Policy",
+    "rights": "All rights reserved.",
+    "leaveReview": "Leave Us a Google Review"
+  },
+  "home": {
+    "heroBadge": "UK-Based Digital Innovation Agency",
+    "heroTitle": "Build. Grow. Dominate Your Digital Presence.",
+    "heroSubtitle": "Where bold ideas become intelligent digital experiences.",
+    "heroDesc": "At Forge9X, we partner with ambitious businesses to design, build, and scale powerful digital products and AI-driven solutions. From the first idea to launch and beyond, we combine strategic thinking, modern software engineering, and artificial intelligence to solve complex challenges, accelerate innovation, and create technology built for lasting growth.",
+    "startProject": "Start Your Project",
+    "viewWork": "View Our Work",
+    "techTitle": "Technologies We Work With",
+    "servicesTitle": "What We Offer",
+    "servicesDesc": "From websites to AI we have the expertise to digitise and accelerate your business at every stage.",
+    "learnMore": "Learn more",
+    "whyBadge": "Why Forge9x",
+    "whyTitle": "Why Choose Forge9x?",
+    "whyDesc": "We don't just provide software solutions we build lasting partnerships that fuel your success. At Forge9x, we believe impactful software has the power to keep customers engaged longer than they intended.",
+    "aboutUs": "About Us",
+    "ctaTitle": "Ready to Unlock Your Business Potential?",
+    "ctaDesc": "Let Forge9x help you build, grow, and maintain a powerful web presence. Get a free consultation today.",
+    "ctaBtn": "Get a Free Consultation",
+    "services": [
+      {
+        "title": "Web Development",
+        "desc": "Custom websites from simple informational sites to complex web applications built to align with your business goals."
+      },
+      {
+        "title": "Web Applications",
+        "desc": "ERP, CRM, HRM, reservation, logistics, and appointment management systems designed for operational excellence."
+      },
+      {
+        "title": "AI Development",
+        "desc": "Custom AI apps, bots, automation, ML integration, NLP, image recognition, and facial biometrics tailored to your needs."
+      },
+      {
+        "title": "Mobile Development",
+        "desc": "Native and cross-platform iOS & Android apps with exceptional UX and enterprise mobility solutions."
+      },
+      {
+        "title": "SEO",
+        "desc": "Competitor analysis, on-page optimisation, link building, and landing page strategies that convert traffic into sales."
+      },
+      {
+        "title": "Graphic Design",
+        "desc": "Visual identity, branding, logo animation, social media content, and marketing materials that leave a lasting impression."
+      }
+    ],
+    "stats": [
+      { "value": "200+", "label": "Clients Served" },
+      { "value": "5+", "label": "Years Experience" },
+      { "value": "500+", "label": "Projects Delivered" },
+      { "value": "98%", "label": "Client Satisfaction" }
+    ]
+  },
+  "about": {
+    "badge": "About Forge9x",
+    "title": "We are advisors, builders, and innovators",
+    "desc1": "Forge9x is a UK-based digital innovation agency founded on a simple belief: technology should work for people, not the other way around. We partner with ambitious businesses to design, build, and scale powerful digital products.",
+    "desc2": "From our roots in the UK to our talented team in Sri Lanka, we bring together diverse perspectives and deep technical expertise to deliver solutions that genuinely move the needle for our clients.",
+    "learnMore": "Our Story",
+    "stats": [
+      { "value": "200+", "label": "Clients Served" },
+      { "value": "5+", "label": "Years Experience" },
+      { "value": "500+", "label": "Projects Delivered" },
+      { "value": "98%", "label": "Client Satisfaction" }
+    ],
+    "valuesTitle": "Our Values",
+    "values": [
+      { "title": "Innovation First", "desc": "We stay ahead of technology trends to deliver cutting-edge solutions that give our clients a competitive edge." },
+      { "title": "Client Partnership", "desc": "We treat every client as a long-term partner, investing in their success as if it were our own." },
+      { "title": "Quality Excellence", "desc": "We maintain rigorous standards across every project, ensuring reliable, scalable, and maintainable code." },
+      { "title": "Transparent Communication", "desc": "We keep our clients informed at every stage with clear, honest, and proactive communication." }
+    ],
+    "sriLankaBanner": {
+      "title": "Starting a Business in Sri Lanka? We're Here to Help!",
+      "desc": "Forge9x has a dedicated team in Sri Lanka ready to support your business with local expertise, cost-effective solutions, and world-class digital services.",
+      "btn": "Get in Touch"
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Let's Build What's Next Together",
+    "desc": "Whether you're exploring a new idea, scaling an existing product, or need a trusted digital partner, we'd love to hear from you.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Smith",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "john@company.com",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "+44 7700 000000",
+    "serviceLabel": "Service Interested In",
+    "servicePlaceholder": "Select a service",
+    "budgetLabel": "Estimated Budget",
+    "budgetPlaceholder": "Select budget range",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your project...",
+    "fileLabel": "Attach Files (optional)",
+    "privacyConsent": "I agree to Forge9x's",
+    "privacyLink": "Privacy Policy",
+    "sendBtn": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successDesc": "Thank you for getting in touch. We'll respond within 24 hours.",
+    "errorMsg": "Something went wrong. Please try again.",
+    "infoTitle": "Get in Touch",
+    "officeTitle": "Office",
+    "officeAddress": "140 Avon Road, Chelmsford, England, CM1 2LB",
+    "hoursTitle": "Business Hours",
+    "hoursValue": "Mon–Fri, 9am–6pm GMT",
+    "services": ["Web Development", "Web Applications", "AI Development", "Mobile Development", "SEO", "Graphic Design", "Other"],
+    "budgets": ["Under £1,000", "£1,000–£5,000", "£5,000–£10,000", "£10,000–£25,000", "£25,000+", "Not sure yet"]
+  },
+  "careers": {
+    "heroBadge": "This is what you can do.",
+    "heroTitle": "Boost your potential in our core areas.",
+    "heroDesc": "Become an active player in stimulating projects leveraging the latest tech trends. Each area offers unique challenges and opportunities for growth.",
+    "lifeBadge": "Life at Forge9x",
+    "lifeTitle": "Tech. People. Play.",
+    "lifeDesc": "Join a vibrant, stimulating, and inclusive workplace where people matter and innovation thrives. Benefit from an informal and close-knit environment fostering true collaboration and teamwork.",
+    "valuesBadge": "We stand together through shared values.",
+    "valuesTitle": "Our values",
+    "joinTitle": "Join Forge9x",
+    "joinDesc": "Check our latest job offerings and apply. If you can't find what you're looking for or have any enquiries, just reach out to our team.",
+    "applyNow": "Apply Now",
+    "internBadge": "Internships at Forge9x",
+    "internTitle": "Interested in interning with us?",
+    "internDesc": "We'd love to hear from you. Send us an e-mail and let's start the conversation.",
+    "emailUs": "E-mail us",
+    "ctaTitle": "Don't See Your Role?",
+    "ctaDesc": "We're always open to hearing from talented people. Send us your CV and let us know how you can contribute.",
+    "getInTouch": "Get in Touch",
+    "coreAreas": [
+      {
+        "tag": "Product Engineering",
+        "title": "Craft winning digital products that make an impact.",
+        "desc": "Join our team of product specialists to create impactful platforms that enrich the digital landscape and deliver real business value."
+      },
+      {
+        "tag": "Web Solutions",
+        "title": "Unlock new digital potential for businesses.",
+        "desc": "Build customised web solutions and comprehensive business-critical platforms to enable digital growth across industries."
+      },
+      {
+        "tag": "Tech Experts",
+        "title": "Push boundaries in software and AI development.",
+        "desc": "Use your exceptional talent to tackle challenging projects delivered across the UK, Sri Lanka, and beyond."
+      }
+    ],
+    "lifeSlides": [
+      "Tech exposure & opportunity",
+      "Career growth",
+      "People wellness",
+      "Diversity & Inclusion",
+      "Social Impact"
+    ],
+    "values": [
+      { "title": "Customer Obsession", "desc": "We work side by side with our clients to take their business above and beyond." },
+      { "title": "Speed and Excellence", "desc": "We balance high responsiveness with commitment to quality and innovation." },
+      { "title": "Openness and Integrity", "desc": "We are team players who won't shy away from telling our perspective." },
+      { "title": "People Passion", "desc": "We embrace diversity and inspire people to be extraordinary." }
+    ],
+    "offices": [
+      { "region": "UK Office", "greeting": "Hello!" },
+      { "region": "Sri Lanka Office", "greeting": "Ayubowan!" },
+      { "region": "Remote Global", "greeting": "Welcome!" },
+      { "region": "Internships", "greeting": "Let's grow!" }
+    ],
+    "openings": [
+      {
+        "title": "Full Stack Developer",
+        "type": "Full-time",
+        "location": "Remote / UK",
+        "dept": "Engineering",
+        "desc": "We're looking for an experienced Full Stack Developer to build and maintain web applications using React, Node.js, and PostgreSQL."
+      },
+      {
+        "title": "UI/UX Designer",
+        "type": "Full-time",
+        "location": "Remote / UK",
+        "dept": "Design",
+        "desc": "Join our design team to create beautiful, intuitive interfaces for our clients' websites and web applications."
+      },
+      {
+        "title": "SEO Specialist",
+        "type": "Full-time",
+        "location": "Remote",
+        "dept": "Marketing",
+        "desc": "Help our clients rank higher in search engines through data-driven SEO strategies, content planning, and link building campaigns."
+      },
+      {
+        "title": "AI/ML Engineer",
+        "type": "Full-time",
+        "location": "Remote",
+        "dept": "AI",
+        "desc": "Develop cutting-edge AI solutions including NLP models, image recognition systems, and intelligent automation tools for our clients."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Case Studies",
+    "desc": "Boost your digital potential. Real projects, real results see how Forge9x helps businesses turn bold ideas into powerful digital products.",
+    "filterLabel": "Filter by Category",
+    "readMore": "Read More",
+    "ctaTitle": "Have a Project in Mind?",
+    "ctaDesc": "Let's add your project to our portfolio. Get in touch and let's make it happen.",
+    "ctaBtn": "Start Your Project",
+    "categories": ["All", "Web Development", "Web Applications", "AI", "Mobile", "Graphic Design"]
+  },
+  "pricing": {
+    "badge": "Transparent Pricing",
+    "title": "Simple, Transparent Pricing",
+    "desc": "No hidden fees, no surprises. Choose the plan that fits your business needs.",
+    "mostPopular": "Most Popular",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "customTitle": "Need Something Custom?",
+    "customDesc": "Every business is unique. Contact us for a tailored quote that perfectly matches your requirements.",
+    "customBtn": "Get a Custom Quote"
+  },
+  "blog": {
+    "badge": "Latest from Forge9x",
+    "title": "Blog & Insights",
+    "desc": "Expert perspectives on web development, AI, digital strategy, and business growth.",
+    "readMore": "Read More",
+    "ctaTitle": "Want to Stay Updated?",
+    "ctaDesc": "Subscribe to our newsletter for the latest insights on digital innovation and technology.",
+    "ctaBtn": "Subscribe Now"
+  },
+  "team": {
+    "badge": "The People Behind Forge9x",
+    "title": "Meet Our Team",
+    "desc": "A passionate group of designers, developers, and strategists committed to delivering exceptional digital experiences.",
+    "ctaTitle": "Want to Join Our Team?",
+    "ctaDesc": "We're always looking for talented people. Check out our open positions.",
+    "ctaBtn": "View Careers"
+  },
+  "caseStudies": {
+    "badge": "Real Results",
+    "title": "Case Studies",
+    "desc": "Explore how we've helped businesses across industries transform their digital presence and achieve measurable results.",
+    "readMore": "Read More",
+    "ctaTitle": "Ready to Be Our Next Success Story?",
+    "ctaDesc": "Let's work together to transform your digital presence.",
+    "ctaBtn": "Start Your Project"
+  },
+  "insights": {
+    "badge": "Knowledge Hub",
+    "title": "Insights",
+    "desc": "Expert perspectives, tutorials, and industry analysis from the Forge9x team.",
+    "readMore": "Read More",
+    "ctaTitle": "Want More Insights?",
+    "ctaDesc": "Subscribe to our newsletter to get the latest articles straight to your inbox.",
+    "ctaBtn": "Subscribe"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: January 2025"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "updated": "Last updated: January 2025"
+  },
+  "refund": {
+    "title": "Refund Policy",
+    "updated": "Last updated: January 2025"
+  },
+  "common": {
+    "fullTime": "Full-time",
+    "remote": "Remote",
+    "learnMore": "Learn more",
+    "getInTouch": "Get in Touch",
+    "readMore": "Read More",
+    "viewAll": "View All"
+  }
+}
