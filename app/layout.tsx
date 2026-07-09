@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     icon: "/ico-logo.png",
     shortcut: "/ico-logo.png",
   },
+  verification: {
+    google: "jm2tqzHkJ2aXd4xBz3bmeGPzVlm0DIxEWPxwfvnD41o",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
