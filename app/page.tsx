@@ -150,12 +150,12 @@ export default function Home() {
                 className="group rounded-2xl p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                 style={{ backgroundColor: s.color }}
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 text-gray-900 bg-black/10 group-hover:bg-black/15 transition-colors">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-black/10 group-hover:bg-black/15 transition-colors" style={{ color: "#111827" }}>
                   {s.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-sm text-gray-800/80 leading-relaxed mb-4">{s.desc}</p>
-                <div className="flex items-center gap-1 text-sm font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold mb-2" style={{ color: "#111827" }}>{s.title}</h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#1f2937" }}>{s.desc}</p>
+                <div className="flex items-center gap-1 text-sm font-semibold" style={{ color: "#111827" }}>
                   Learn more <ArrowRight size={14} />
                 </div>
               </Link>
