@@ -11,6 +11,9 @@ export async function generateStaticParams() {
 export const metadata: Metadata = {
   title: "Forge9x — Digital Innovation Agency",
   description: "UK-based digital innovation agency specialising in web development, AI, mobile apps, and SEO.",
+  verification: {
+    google: "fd13b6425fad0c86",
+  },
 };
 
 export default async function LangLayout({
