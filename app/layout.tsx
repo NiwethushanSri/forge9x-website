@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" href="/favicon-f9x.png" type="image/png" sizes="512x512" />
       </head>
-      <body className="bg-black text-white">{children}</body>
+      <body className="bg-black text-white">
+        <LocalBusinessSchema />
+        {children}
+      </body>
     </html>
   );
 }

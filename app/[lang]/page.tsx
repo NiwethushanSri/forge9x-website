@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = seo({
   title: "Web Development, AI & Digital Solutions",
-  description: "Forge9x is a UK-based digital agency delivering web development, AI solutions, mobile apps, and SEO for startups and businesses worldwide.",
+  description: "Forge9x is a digital agency headquartered in Batticaloa, Sri Lanka with a UK office in Chelmsford. We deliver web development, AI, mobile apps and SEO for businesses worldwide.",
   path: "/",
 });
 import {

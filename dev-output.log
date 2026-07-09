@@ -115,3 +115,9 @@
  GET / 200 in 93ms (next.js: 41ms, proxy.ts: 7ms, generate-params: 7ms, application-code: 46ms)
  GET /contact 200 in 6.2s (next.js: 6.2s, proxy.ts: 9ms, generate-params: 4.0s, application-code: 30ms)
  GET /pricing 200 in 5.7s (next.js: 5.7s, proxy.ts: 9ms, generate-params: 4.0s, application-code: 41ms)
+ GET /pricing 200 in 87ms (next.js: 31ms, proxy.ts: 7ms, generate-params: 6ms, application-code: 49ms)
+ GET / 200 in 95ms (next.js: 39ms, proxy.ts: 8ms, generate-params: 6ms, application-code: 47ms)
+ GET /about 200 in 1063ms (next.js: 1011ms, proxy.ts: 11ms, generate-params: 6ms, application-code: 41ms)
+ GET /about 200 in 358ms (next.js: 60ms, proxy.ts: 15ms, generate-params: 10ms, application-code: 282ms)
+ GET / 200 in 143ms (next.js: 64ms, proxy.ts: 13ms, generate-params: 11ms, application-code: 66ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
