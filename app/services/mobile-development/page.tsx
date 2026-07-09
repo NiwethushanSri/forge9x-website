@@ -47,11 +47,11 @@ export default function MobileDevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {mobileServices.map((s) => (
               <div key={s.title} className="rounded-2xl p-7 hover:-translate-y-1 transition-all" style={{ backgroundColor: s.color }}>
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/10 mb-5 text-gray-900">
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/10 mb-5" style={{ color: "#111827" }}>
                   {s.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{s.title}</h3>
-                <p className="text-sm text-gray-800 leading-relaxed">{s.desc}</p>
+                <h3 className="text-lg font-bold mb-3" style={{ color: "#111827" }}>{s.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#1f2937" }}>{s.desc}</p>
               </div>
             ))}
           </div>

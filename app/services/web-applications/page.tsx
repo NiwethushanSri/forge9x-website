@@ -39,11 +39,11 @@ export default function WebApplicationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {apps.map((app) => (
               <div key={app.title} className="rounded-2xl p-7 hover:-translate-y-1 transition-all" style={{ backgroundColor: app.color }}>
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/10 mb-5 text-gray-900">
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-black/10 mb-5" style={{ color: "#111827" }}>
                   {app.icon}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{app.title}</h3>
-                <p className="text-sm text-gray-800 leading-relaxed">{app.desc}</p>
+                <h3 className="text-lg font-bold mb-3" style={{ color: "#111827" }}>{app.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#1f2937" }}>{app.desc}</p>
               </div>
             ))}
           </div>
