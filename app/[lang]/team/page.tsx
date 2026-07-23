@@ -74,15 +74,21 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
                   </a>
                 </div>
                 <div className="flex flex-col gap-2 mb-4">
-                  <div className="flex flex-col gap-0.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">BEng (Hons) Software Engineering</span>
-                    <span className="text-sm text-white font-medium">University of Westminster</span>
-                    <span className="text-xs text-gray-500">United Kingdom</span>
+                  <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <img src="/universities/westminster.png" alt="University of Westminster" className="w-10 h-10 object-contain shrink-0" />
+                    <div className="flex flex-col gap-0.5">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">BEng (Hons) Software Engineering</span>
+                      <span className="text-sm text-white font-medium">University of Westminster</span>
+                      <span className="text-xs text-gray-500">United Kingdom</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-0.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">MSc Advanced Computer Science</span>
-                    <span className="text-sm text-white font-medium">Swansea University</span>
-                    <span className="text-xs text-gray-500">United Kingdom</span>
+                  <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <img src="/universities/swansea.png" alt="Swansea University" className="w-10 h-10 object-contain shrink-0" />
+                    <div className="flex flex-col gap-0.5">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">MSc Advanced Computer Science</span>
+                      <span className="text-sm text-white font-medium">Swansea University</span>
+                      <span className="text-xs text-gray-500">United Kingdom</span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-400">
