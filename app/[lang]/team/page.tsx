@@ -63,7 +63,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
                 <TeamPhoto src="/team/niwethushan.jpg" alt="Niwethushan Sritharan" initials="NS" color="#00679A" />
               </div>
               <div>
-                <h2 className="text-white text-xl font-black mb-1">Sritharan Niwethushan</h2>
+                <h2 className="text-white text-xl font-black mb-1">Niwethushan Sritharan</h2>
                 <p className="font-semibold text-sm mb-4" style={{ color: "#5EA8D9" }}>Founder &amp; CEO, Forge9X</p>
                 <div className="flex flex-col gap-2 mb-4">
                   <div className="flex flex-col gap-0.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
@@ -88,7 +88,7 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-gray-300 text-lg leading-relaxed mb-5">
-                  Sritharan Niwethushan is a technology entrepreneur, software engineer, and AI solutions architect based in London, United Kingdom. As the Founder and CEO of Forge9X, he is committed to helping businesses transform through innovative software, artificial intelligence, automation, and modern digital solutions.
+                  Niwethushan Sritharan is a technology entrepreneur, software engineer, and AI solutions architect based in London, United Kingdom. As the Founder and CEO of Forge9X, he is committed to helping businesses transform through innovative software, artificial intelligence, automation, and modern digital solutions.
                 </p>
                 <p className="text-gray-400 leading-relaxed mb-5">
                   With over six years of experience in software engineering and enterprise technology, Niwethushan has worked across software development, machine learning, business automation, cloud technologies, digital transformation, and legal technology. His mission is simple: build technology that solves real-world problems and creates measurable business value.
