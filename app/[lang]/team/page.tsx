@@ -145,15 +145,21 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
                 <h2 className="text-white text-xl font-black mb-1">Gobinath Easwaranathan</h2>
                 <p className="font-semibold text-sm mb-4" style={{ color: "#5EA8D9" }}>Co-Founder &amp; CTO, Forge9X</p>
                 <div className="flex flex-col gap-2 mb-4">
-                  <div className="flex flex-col gap-0.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">MSc Network and Computer Systems Security</span>
-                    <span className="text-sm text-white font-medium">University of Greenwich</span>
-                    <span className="text-xs text-gray-500">United Kingdom</span>
+                  <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <img src="/universities/greenwich.png" alt="University of Greenwich" className="w-10 h-10 object-contain shrink-0" />
+                    <div className="flex flex-col gap-0.5">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">MSc Network and Computer Systems Security</span>
+                      <span className="text-sm text-white font-medium">University of Greenwich</span>
+                      <span className="text-xs text-gray-500">United Kingdom</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-0.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">BSc Computer Systems and Networking</span>
-                    <span className="text-sm text-white font-medium">University of Greenwich</span>
-                    <span className="text-xs text-gray-500">United Kingdom</span>
+                  <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <img src="/universities/greenwich.png" alt="University of Greenwich" className="w-10 h-10 object-contain shrink-0" />
+                    <div className="flex flex-col gap-0.5">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">BSc Computer Systems and Networking</span>
+                      <span className="text-sm text-white font-medium">University of Greenwich</span>
+                      <span className="text-xs text-gray-500">United Kingdom</span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-400">
