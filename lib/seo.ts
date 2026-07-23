@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const base = "https://www.forge9x.co.uk";
 const siteName = "Forge9x";
-const defaultImage = `${base}/og-image.jpg`;
+const defaultImage = `${base}/office-team.jpg`;
 
 export function seo(args: {
   title: string;

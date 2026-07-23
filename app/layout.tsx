@@ -16,6 +16,21 @@ export const metadata: Metadata = {
   verification: {
     google: "jm2tqzHkJ2aXd4xBz3bmeGPzVlm0DIxEWPxwfvnD41o",
   },
+  openGraph: {
+    title: "Forge9x — Digital Innovation Agency",
+    description: "Forge9x is a digital agency headquartered in Batticaloa, Sri Lanka with a UK office in Chelmsford. Web development, AI, mobile apps and SEO.",
+    url: "https://www.forge9x.co.uk",
+    siteName: "Forge9x",
+    images: [{ url: "https://www.forge9x.co.uk/office-team.jpg", width: 1200, height: 630 }],
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Forge9x — Digital Innovation Agency",
+    description: "Forge9x is a digital agency headquartered in Batticaloa, Sri Lanka with a UK office in Chelmsford.",
+    images: ["https://www.forge9x.co.uk/office-team.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
