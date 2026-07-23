@@ -297,7 +297,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
             {/* Leaders list */}
             <div className="flex flex-col divide-y divide-gray-800">
               {[
-                { name: "Sritharan Niwethushan", role: "Founder & CEO, Forge9X", image: "/team/niwethushan.jpg", linkedin: "https://www.linkedin.com/in/sritharan-niwethushan-558b2517b/", badges: [
+                { name: "Niwethushan Sritharan", role: "Founder & CEO, Forge9X", image: "/team/niwethushan.jpg", linkedin: "https://www.linkedin.com/in/sritharan-niwethushan-558b2517b/", badges: [
                   { src: "/badges/gicast.png", alt: "Cyber Security Training (GICAST) — The Open University", url: "https://www.open.edu/openlearn/badges/badge.php?hash=dfb6a19a1cbbfc59eefdebda7ce83259c125c00a" },
                   { src: "/badges/intro-cybersecurity.png", alt: "Introduction to Cyber Security — The Open University", url: "https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" },
                 ]},
@@ -328,7 +328,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
             <div className="flex flex-col gap-8 lg:pt-4">
               <blockquote className="border-l-4 pl-6" style={{ borderColor: "#00679A" }}>
                 <p className="text-2xl font-bold text-white leading-snug mb-4">&ldquo;We started Forge9X with one belief: great technology should be accessible to every business, not just the ones with the biggest budgets.&rdquo;</p>
-                <cite className="text-sm text-gray-500 not-italic">Sritharan Niwethushan, Founder &amp; CEO</cite>
+                <cite className="text-sm text-gray-500 not-italic">Niwethushan Sritharan, Founder &amp; CEO</cite>
               </blockquote>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 {[
