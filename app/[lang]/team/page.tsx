@@ -64,7 +64,15 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
               </div>
               <div>
                 <h2 className="text-white text-xl font-black mb-1">Niwethushan Sritharan</h2>
-                <p className="font-semibold text-sm mb-4" style={{ color: "#5EA8D9" }}>Founder &amp; CEO, Forge9X</p>
+                <p className="font-semibold text-sm mb-3" style={{ color: "#5EA8D9" }}>Founder &amp; CEO, Forge9X</p>
+                <div className="flex items-center gap-3 mb-4">
+                  <a href="https://www.open.edu/openlearn/badges/badge.php?hash=dfb6a19a1cbbfc59eefdebda7ce83259c125c00a" target="_blank" rel="noopener noreferrer" title="Cyber Security Training (GICAST) — The Open University" className="hover:opacity-80 transition-opacity">
+                    <img src="/badges/gicast.png" alt="Cyber Security Training GICAST — The Open University" className="w-16 h-16 object-contain" />
+                  </a>
+                  <a href="https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" target="_blank" rel="noopener noreferrer" title="Introduction to Cyber Security — The Open University" className="hover:opacity-80 transition-opacity">
+                    <img src="/badges/intro-cybersecurity.png" alt="Introduction to Cyber Security — The Open University" className="w-16 h-16 object-contain" />
+                  </a>
+                </div>
                 <div className="flex flex-col gap-2 mb-4">
                   <div className="flex flex-col gap-0.5 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
                     <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500">BEng (Hons) Software Engineering</span>
@@ -77,17 +85,9 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
                     <span className="text-xs text-gray-500">United Kingdom</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                <div className="flex items-center gap-2 text-sm text-gray-400">
                   <MapPin size={14} className="shrink-0" />
                   London, United Kingdom
-                </div>
-                <div className="flex items-center gap-3">
-                  <a href="https://www.open.edu/openlearn/badges/badge.php?hash=dfb6a19a1cbbfc59eefdebda7ce83259c125c00a" target="_blank" rel="noopener noreferrer" title="Cyber Security Training (GICAST) — The Open University" className="hover:opacity-80 transition-opacity">
-                    <img src="/badges/gicast.png" alt="Cyber Security Training GICAST — The Open University" className="w-16 h-16 object-contain" />
-                  </a>
-                  <a href="https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" target="_blank" rel="noopener noreferrer" title="Introduction to Cyber Security — The Open University" className="hover:opacity-80 transition-opacity">
-                    <img src="/badges/intro-cybersecurity.png" alt="Introduction to Cyber Security — The Open University" className="w-16 h-16 object-contain" />
-                  </a>
                 </div>
               </div>
             </div>
