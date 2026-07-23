@@ -77,9 +77,17 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
                     <span className="text-xs text-gray-500">United Kingdom</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
+                <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
                   <MapPin size={14} className="shrink-0" />
                   London, United Kingdom
+                </div>
+                <div className="flex items-center gap-3">
+                  <a href="https://www.open.edu/openlearn/badges/badge.php?hash=dfb6a19a1cbbfc59eefdebda7ce83259c125c00a" target="_blank" rel="noopener noreferrer" title="Cyber Security Training (GICAST) — The Open University" className="hover:opacity-80 transition-opacity">
+                    <img src="/badges/gicast.png" alt="Cyber Security Training GICAST — The Open University" className="w-10 h-10 object-contain" />
+                  </a>
+                  <a href="https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" target="_blank" rel="noopener noreferrer" title="Introduction to Cyber Security — The Open University" className="hover:opacity-80 transition-opacity">
+                    <img src="/badges/intro-cybersecurity.png" alt="Introduction to Cyber Security — The Open University" className="w-10 h-10 object-contain" />
+                  </a>
                 </div>
               </div>
             </div>
