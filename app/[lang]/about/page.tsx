@@ -297,18 +297,28 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
             {/* Leaders list */}
             <div className="flex flex-col divide-y divide-gray-800">
               {[
-                { name: "Sritharan Niwethushan", role: "Founder & CEO, Forge9X", image: "/team/niwethushan.jpg", linkedin: "https://www.linkedin.com/in/sritharan-niwethushan-558b2517b/" },
-                { name: "Gobinath Easwaranathan", role: "Co-Founder & CTO, Forge9X", image: "/team/gobinath.jpg", linkedin: "https://www.linkedin.com/in/nathnathanuk/" },
+                { name: "Sritharan Niwethushan", role: "Founder & CEO, Forge9X", image: "/team/niwethushan.jpg", linkedin: "https://www.linkedin.com/in/sritharan-niwethushan-558b2517b/", badges: [
+                  { src: "/badges/gicast.png", alt: "Cyber Security Training (GICAST) — The Open University", url: "https://www.open.edu/openlearn/badges/badge.php?hash=dfb6a19a1cbbfc59eefdebda7ce83259c125c00a" },
+                  { src: "/badges/intro-cybersecurity.png", alt: "Introduction to Cyber Security — The Open University", url: "https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" },
+                ]},
+                { name: "Gobinath Easwaranathan", role: "Co-Founder & CTO, Forge9X", image: "/team/gobinath.jpg", linkedin: "https://www.linkedin.com/in/nathnathanuk/", badges: [] },
               ].map((m) => (
                 <div key={m.name} className="flex items-center gap-6 py-8">
                   <img src={m.image} alt={m.name} className="w-20 h-20 rounded-xl object-cover object-top shrink-0 grayscale" />
                   <div>
                     <h3 className="text-white font-bold text-lg mb-0.5">{m.name}</h3>
                     <p className="text-gray-400 text-sm mb-3">{m.role}</p>
-                    <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#5EA8D9" }}>
-                      LinkedIn
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#5EA8D9" }}>
+                        LinkedIn
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                      </a>
+                      {m.badges.map((b) => (
+                        <a key={b.src} href={b.url} target="_blank" rel="noopener noreferrer" title={b.alt} className="hover:opacity-80 transition-opacity">
+                          <img src={b.src} alt={b.alt} className="w-8 h-8 object-contain" />
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}

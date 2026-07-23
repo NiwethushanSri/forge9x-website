@@ -121,3 +121,12 @@
  GET /about 200 in 358ms (next.js: 60ms, proxy.ts: 15ms, generate-params: 10ms, application-code: 282ms)
  GET / 200 in 143ms (next.js: 64ms, proxy.ts: 13ms, generate-params: 11ms, application-code: 66ms)
 [browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 405ms (next.js: 232ms, proxy.ts: 12ms, generate-params: 6ms, application-code: 162ms)
+ GET / 200 in 86ms (next.js: 26ms, proxy.ts: 7ms, generate-params: 6ms, application-code: 53ms)
+ GET / 200 in 76ms (next.js: 24ms, proxy.ts: 7ms, generate-params: 6ms, application-code: 45ms)
+ GET / 200 in 87ms (next.js: 26ms, proxy.ts: 7ms, generate-params: 6ms, application-code: 54ms)
+ GET / 200 in 83ms (next.js: 26ms, proxy.ts: 8ms, generate-params: 6ms, application-code: 49ms)
+ GET / 200 in 80ms (next.js: 25ms, proxy.ts: 7ms, generate-params: 5ms, application-code: 48ms)
+ GET / 200 in 65ms (next.js: 16ms, proxy.ts: 8ms, generate-params: 6ms, application-code: 41ms)
+ GET / 200 in 257ms (next.js: 98ms, proxy.ts: 32ms, generate-params: 27ms, application-code: 126ms)
+ GET / 200 in 572ms (next.js: 89ms, proxy.ts: 55ms, generate-params: 19ms, application-code: 429ms)
