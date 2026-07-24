@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -15,41 +16,38 @@ export default function CookieBanner() {
     setVisible(false);
   };
 
-  const deny = () => {
-    localStorage.setItem("cookie-consent", "denied");
+  const decline = () => {
+    localStorage.setItem("cookie-consent", "declined");
     setVisible(false);
   };
 
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] bg-gray-900 border-t border-gray-700 px-4 py-5 sm:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-        <div className="flex items-start gap-4 flex-1">
-          <div className="shrink-0">
-            <span className="text-2xl font-black" style={{ color: "#FFFFFF" }}>Forge</span>
-            <span className="text-2xl font-black" style={{ color: "#FFCC33" }}>9x</span>
-          </div>
-          <div>
-            <p className="text-white font-semibold mb-1">This website uses cookies</p>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              We use cookies to personalise content and ads, to provide social media features, and to analyse our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners who may combine it with other information that you&apos;ve provided to them or that they&apos;ve collected from your use of their services.
-            </p>
-          </div>
+    <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[#111] border-t border-gray-800 px-4 py-5 sm:px-6">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex-1">
+          <p className="text-sm text-gray-300 leading-relaxed">
+            We use cookies to improve your experience on our website. By continuing to browse, you agree to our{" "}
+            <Link href="/privacy" className="underline hover:text-white transition-colors" style={{ color: "#5EA8D9" }}>
+              Privacy Policy
+            </Link>
+            . You can choose to accept or decline cookies.
+          </p>
         </div>
-        <div className="flex items-center gap-3 shrink-0 self-end sm:self-auto">
+        <div className="flex items-center gap-3 shrink-0">
           <button
-            onClick={deny}
-            className="px-6 py-2.5 rounded-full border border-gray-500 text-white text-sm font-semibold hover:bg-gray-800 transition-colors"
+            onClick={decline}
+            className="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-300 border border-gray-700 hover:border-gray-500 hover:text-white transition-colors"
           >
-            Deny
+            Decline
           </button>
           <button
             onClick={accept}
-            className="px-6 py-2.5 rounded-full text-gray-900 text-sm font-semibold hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: "#FFCC33" }}
+            className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-all hover:brightness-110"
+            style={{ backgroundColor: "#00679A" }}
           >
-            Allow all
+            Accept All
           </button>
         </div>
       </div>
