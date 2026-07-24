@@ -300,6 +300,7 @@ export default function AboutPage({ params }: { params: Promise<{ lang: Locale }
                 { name: "Niwethushan Sritharan", role: "Founder & CEO, Forge9X", image: "/team/niwethushan.jpg", linkedin: "https://www.linkedin.com/in/sritharan-niwethushan-558b2517b/", badges: [
                   { src: "/badges/gicast.png", alt: "Cyber Security Training (GICAST) — The Open University", url: "https://www.open.edu/openlearn/badges/badge.php?hash=dfb6a19a1cbbfc59eefdebda7ce83259c125c00a" },
                   { src: "/badges/intro-cybersecurity.png", alt: "Introduction to Cyber Security — The Open University", url: "https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" },
+                  { src: "/badges/cisco-ethical-hacker.png", alt: "Ethical Hacker — Cisco Networking Academy", url: "https://www.credly.com/badges/902437b2-ea63-4770-a4fb-b10c2b1e695d/linked_in_profile" },
                 ]},
                 { name: "Gobinath Easwaranathan", role: "Co-Founder & CTO, Forge9X", image: "/team/gobinath.jpg", linkedin: "https://www.linkedin.com/in/nathnathanuk/", badges: [] },
               ].map((m) => (

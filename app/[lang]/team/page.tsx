@@ -72,6 +72,9 @@ export default async function TeamPage({ params }: { params: Promise<{ lang: Loc
                   <a href="https://www.open.edu/openlearn/badges/badge.php?hash=36b7661f834f321ab88f857e1e455a2acf9c82f9" target="_blank" rel="noopener noreferrer" title="Introduction to Cyber Security — The Open University" className="hover:opacity-80 transition-opacity">
                     <img src="/badges/intro-cybersecurity.png" alt="Introduction to Cyber Security — The Open University" className="w-16 h-16 object-contain" />
                   </a>
+                  <a href="https://www.credly.com/badges/902437b2-ea63-4770-a4fb-b10c2b1e695d/linked_in_profile" target="_blank" rel="noopener noreferrer" title="Ethical Hacker — Cisco Networking Academy" className="hover:opacity-80 transition-opacity">
+                    <img src="/badges/cisco-ethical-hacker.png" alt="Ethical Hacker — Cisco Networking Academy" className="w-16 h-16 object-contain" />
+                  </a>
                 </div>
                 <div className="flex flex-col gap-2 mb-4">
                   <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3">
